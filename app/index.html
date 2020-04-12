@@ -6,8 +6,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>MartPlace</title>
-  <link href="https://fonts.googleapis.com/css?family=Quicksand:300,regular,500,600,700" rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
   <link rel="stylesheet" href="css/style.min.css">
 </head>
 
@@ -17,72 +15,46 @@
     <div class="header__top">
       <div class="container">
         <div class="header__inner">
-          <div class="header__inner-logo">
-            <a href=""><img src="img/logo.png" alt=""></img>
-          </div>
-
-          <a class="header__inner-btn" href="#">Become a Seller</a>
-
-          <div class="header__item">
-            <div class="header__item-icons">
-              <span class="lnr lnr-alarm"></span>
-              <span class="lnr lnr-envelope"></span>
-              <span class="lnr lnr-cart"></span>
-            </div>
-            <div class="header__item-info">
-              <div class="header__item-img">
-                <img src="img/user-logo.png" alt="">
+          <a class="header__inner-logo href=""><img src=" img/logo.png" alt=""></img>
+            <a class="header__inner-btn" href="#">Become a Seller</a>
+            <div class="header__box">
+              <div class="header__box-icons">
+                <a class="header__box-icon lnr lnr-alarm" href="#"><span class="header__icon-red">25</span></a>
+                <a class="header__box-icon lnr lnr-envelope" href="#"><span class="header__icon-green">6</span></a>
+                <a class="header__box-icon lnr lnr-cart" href="#"><span class="header__icon-blue">2</span></a>
               </div>
-              <div class="header__data">
-                <div class="header__item-name">
-                  Taofiq Hakim
-                </div>
-                <div class="header__item-summ">
-                  $20.45
+              <div class="header__box-info">
+                <a class="avatar" href="#" style="background-image: url(img/user-logo.jpg);"></a>
+                <div class="header__data">
+                  <div class="header__data-name">
+                    Taofiq Hakim
+                  </div>
+                  <div class="header__data-sum">
+                    $20.45
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
         </div>
       </div>
     </div>
     <div class="header__bottom">
       <div class="container">
         <div class="header__bottom-inner">
-          <nav class="menu">
-            <ul class="menu__list">
-              <li>
-                <a href="" hred="#">
-                  Home
-                </a>
-              </li>
-              <li>
-                <a href="" hred="#">
-                  All products
-                </a>
-              </li>
-              <li>
-                <a href="" hred="#">
-                  Wordpress
-                </a>
-              </li>
-              <li>
-                <a href="" hred="#">
-                  Festures
-                </a>
-              </li>
-              <li>
-                <a href="" hred="#">
-                  Pages
-                </a>
-              </li>
-            </ul>
-          </nav>
+
+          <ul class="header__menu-list">
+            <li class="header__menu-item"><a class="header__menu-link" href="" hred="#">Home</a></li>
+            <li class="header__menu-item"><a class="header__menu-link" href="" hred="#">All products</a></li>
+            <li class="header__menu-item"><a class="header__menu-link" href="" hred="#">Wordpress</a></li>
+            <li class="header__menu-item"><a class="header__menu-link" href="" hred="#">Festures</a></li>
+            <li class="header__menu-item"><a class="header__menu-link" href="" hred="#">Pages</a></li>
+          </ul>
+
           <div class="header__search">
-            <form action="">
-              <input type="text" placeholder="Search product here..." required>
-              <button type="submit">
-                <span class="lnr lnr-magnifier"></span>
+            <form class="header__form" action="">
+              <input class="header__form-input" type="search" placeholder="Search product here..." required>
+              <button class="header__form-button" type="submit">
+                <span class="header__form-icon lnr lnr-magnifier"></span>
               </button>
             </form>
           </div>
@@ -94,9 +66,9 @@
   <section class="digital">
     <div class="container">
       <div class="digital__title">
-        Create Your Own
-        <h1>Digital Product Marketplace</h1>
-      </div>
+        Create Your Own</div>
+      <div class="digital__title-bold">Digital Product Marketplace</div>
+
       <div class="digital__text">
         MartPlace is the most powerful, & customizable template for Easy Digital Downloads Products
       </div>
@@ -109,37 +81,33 @@
   </section>
 
 
-  <!-- <section class="search">
+  <section class="search">
     <div class="container">
       <div class="search__inner">
-        <div class="search__form">
-          <form action="">
-            <input type="text" placeholder="Search your products...">
-            <select name="" id="">
-              <option value="">All Categories</option>
-              <option value="">WordPress</option>
-              <option value="">Site Template</option>
-              <option value="">Plugins</option>
-              <option value="">PSD Template</option>
-              <option value="">Joomla</option>
-              <option value="">User Interface</option>
-              <option value="">Landing Page</option>
-              <option value="">Software</option>
-            </select>
-            <button type="submit">Search Now</button>
-          </form>
-        </div>
+        <form class="search__form" action="">
+          <input class="search__input" type="search" placeholder="Search your products...">
+          <select class="search__select" name="" id="">
+            <option value="">All Categories</option>
+            <option value="">WordPress</option>
+            <option value="">Site Template</option>
+            <option value="">Plugins</option>
+            <option value="">PSD Template</option>
+            <option value="">Joomla</option>
+            <option value="">User Interface</option>
+            <option value="">Landing Page</option>
+            <option value="">Software</option>
+          </select>
+          <button class="search__button" type="submit">Search Now</button>
+        </form>
       </div>
     </div>
-  </section> -->
+  </section>
 
-  <div class="advantages">
+  <section class="advantages">
     <div class="container">
       <div class="advantages__inner">
         <div class="advantages__item">
-          <div class="advantages__item-img">
-            <img src="img/content/content-item1.png" alt="">
-          </div>
+          <img class="advantages__item-img" src="img/content/content-item1.png" alt="">
           <div class="advantages__item-title">
             Best UX Research
           </div>
@@ -149,10 +117,8 @@
             congue is laoreet elit metus.
           </div>
         </div>
-        <div class="advantages__item advantages__item-active">
-          <div class="advantages__item-img">
-            <img src="img/content/content-item2.png" alt="">
-          </div>
+        <div class="advantages__item">
+          <img class="advantages__item-img" src="img/content/content-item2.png" alt="">
           <div class="advantages__item-title ">
             Fully Responsive
           </div>
@@ -163,9 +129,7 @@
           </div>
         </div>
         <div class="advantages__item">
-          <div class="advantages__item-img">
-            <img src="img/content/content-item3.png" alt="">
-          </div>
+          <img class="advantages__item-img" src="img/content/content-item3.png" alt="">
           <div class="advantages__item-title">
             Buy & Sell Easily
           </div>
@@ -177,7 +141,169 @@
         </div>
       </div>
     </div>
-  </div>
+  </section>
+
+  <section class="slider-weekly">
+    <div class="container">
+      <div class="slider-weekly__top ">
+        <div class="slider-weekly__title title-slider">
+          Weekly Featured Products
+        </div>
+        <div class="slider-weekly__arrows"></div>
+      </div>
+      <div class="slider-weekly__inner">
+        <div class="slider-weekly__item">
+          <div alt="" class="slider-weekly__item-img"
+            style="background-image: url(img/content/slider-weekly-img1.jpg);">
+          </div>
+          <div class="slider-weekly__item-content">
+            <div class="slider-weekly__item-title title-item">
+              One Page Resume Template
+            </div>
+            <div class="slider-weekly__item-box">
+              <a class="slider-weekly__item-avatar avatar" href="#"
+                style="background-image: url(img/user-logo.jpg);"></a>
+              <a class="slider-weekly__item-author item-author" href="#">AazzTech</a>
+              <a class="slider-weekly__item-category item-category icon-wordpress" href="#">Wordpress</a>
+            </div>
+            <div class="slider-weekly__item-text">
+              Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque the mattis, leo quam
+              aliquet congue placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque the mattis,
+              leo
+              quam aliquet congue justo ut scelerisque.
+            </div>
+            <div class="slider-weekly__item-buttons">
+              <button class="slider-weekly__item-button product__button" type="submit">website</button>
+              <button class="slider-weekly__item-button product__button" type="submit">plugin</button>
+              <button class="slider-weekly__item-button product__button" type="submit">landing page</button>
+            </div>
+            <div class="slider-weekly__item-value">
+              <div class="slider-weekly__item-info">
+                <div class="slider-weekly__item-price product-price">$10 - $50</div>
+                <a class="slider-weekly__item-like lnr" href="#">46</a>
+                <a class="slider-weekly__item-cart lnr" href="#">634</a>
+              </div>
+              <div class="slider-weekly__item-star">
+                <div class="rate-star"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="slider-weekly__item">
+          <div alt="" class="slider-weekly__item-img"
+            style="background-image: url(img/content/slider-weekly-img1.jpg);">
+          </div>
+          <div class="slider-weekly__item-content">
+            <div class="slider-weekly__item-title title-item">
+              One Page Resume Template
+            </div>
+            <div class="slider-weekly__item-box">
+              <a class="slider-weekly__item-avatar avatar" href="#"
+                style="background-image: url(img/user-logo.jpg);"></a>
+              <a class="slider-weekly__item-author item-author" href="#">AazzTech</a>
+              <a class="slider-weekly__item-category item-category icon-wordpress">Wordpress</a>
+            </div>
+            <div class="slider-weekly__item-text">
+              Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque the mattis, leo quam
+              aliquet congue placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque the mattis,
+              leo
+              quam aliquet congue justo ut scelerisque.
+            </div>
+            <div class="slider-weekly__item-buttons">
+              <button class="slider-weekly__item-button product__button">website</button>
+              <button class="slider-weekly__item-button product__button">plugin</button>
+              <button class="slider-weekly__item-button product__button">landing page</button>
+            </div>
+            <div class="slider-weekly__item-value">
+              <div class="slider-weekly__item-info">
+                <div class="slider-weekly__item-price product-price">$10 - $50</div>
+                <a class="slider-weekly__item-like lnr" href="#">46</a>
+                <a class="slider-weekly__item-cart lnr" href="#">634</a>
+              </div>
+              <div class="slider-weekly__item-star">
+                <div class="rate-star"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="slider-weekly__item">
+          <div alt="" class="slider-weekly__item-img"
+            style="background-image: url(img/content/slider-weekly-img1.jpg);">
+          </div>
+          <div class="slider-weekly__item-content">
+            <div class="slider-weekly__item-title title-item">
+              One Page Resume Template
+            </div>
+            <div class="slider-weekly__item-box">
+              <a class="slider-weekly__item-avatar avatar" href="#"
+                style="background-image: url(img/user-logo.jpg);"></a>
+              <a class="slider-weekly__item-author item-author" href="#">AazzTech</a>
+              <a class="slider-weekly__item-category item-category icon-wordpress">Wordpress</a>
+            </div>
+            <div class="slider-weekly__item-text">
+              Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque the mattis, leo quam
+              aliquet congue placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque the mattis,
+              leo
+              quam aliquet congue justo ut scelerisque.
+            </div>
+            <div class="slider-weekly__item-buttons">
+              <button class="slider-weekly__item-button product__button">website</button>
+              <button class="slider-weekly__item-button product__button">plugin</button>
+              <button class="slider-weekly__item-button product__button">landing page</button>
+            </div>
+            <div class="slider-weekly__item-value">
+              <div class="slider-weekly__item-info">
+                <div class="slider-weekly__item-price product-price">$10 - $50</div>
+                <a class="slider-weekly__item-like lnr" href="#">46</a>
+                <a class="slider-weekly__item-cart lnr" href="#">634</a>
+              </div>
+              <div class="slider-weekly__item-star">
+                <div class="rate-star"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="slider-weekly__item">
+          <div alt="" class="slider-weekly__item-img"
+            style="background-image: url(img/content/slider-weekly-img1.jpg);">
+          </div>
+          <div class="slider-weekly__item-content">
+            <div class="slider-weekly__item-title title-item">
+              One Page Resume Template
+            </div>
+            <div class="slider-weekly__item-box">
+              <a class="slider-weekly__item-avatar avatar" href="#"
+                style="background-image: url(img/user-logo.jpg);"></a>
+              <a class="slider-weekly__item-author item-author" href="#">AazzTech</a>
+              <a class="slider-weekly__item-category item-category icon-wordpress">Wordpress</a>
+            </div>
+            <div class="slider-weekly__item-text">
+              Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque the mattis, leo quam
+              aliquet congue placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque the mattis,
+              leo
+              quam aliquet congue justo ut scelerisque.
+            </div>
+            <div class="slider-weekly__item-buttons">
+              <button class="slider-weekly__item-button product__button">website</button>
+              <button class="slider-weekly__item-button product__button">plugin</button>
+              <button class="slider-weekly__item-button product__button">landing page</button>
+            </div>
+            <div class="slider-weekly__item-value">
+              <div class="slider-weekly__item-info">
+                <div class="slider-weekly__item-price product-price">$10 - $50</div>
+                <a class="slider-weekly__item-like lnr" href="#">46</a>
+                <a class="slider-weekly__item-cart lnr" href="#">634</a>
+              </div>
+              <div class="slider-weekly__item-star">
+                <div class="rate-star"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="js/libs.min.js"></script>

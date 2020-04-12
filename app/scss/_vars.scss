@@ -4,3 +4,11 @@ $black: #333333;
 $grey: #7e8fa1;
 $text: #555555;
 $dblue: #0d33bd;
+$cat: #7347c1;
+$button: #f1f3f6;
+
+@mixin bg {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
