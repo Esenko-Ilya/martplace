@@ -71,12 +71,6 @@ body {
     line-height: 23px;
 }
 
-.item-category {
-    color: $cat;
-    font-size: 15px;
-    margin-left: 21px;
-}
-
 .product__button {
     height: 28px;
     border-radius: 14px;
@@ -90,34 +84,7 @@ body {
     padding-right: 14px;
 }
 
-.item-cart {
-    color: $blue;
 
-    &::before {
-        content: '\e82e';
-        font-size: 15px;
-        padding-right: 9px;
-    }
-}
-
-.item-heart {
-    &::before {
-        content: '\e813';
-        color: $cat;
-        font-size: 15px;
-        padding-right: 10px;
-    }
-}
-
-.product-price {
-    color: #fff;
-    background-color: $blue;
-    border-radius: 15px;
-    font-size: 15px;
-    text-align: center;
-    padding: 0 10px;
-    font-family: 'Quicksand-Medium';
-}
 
 .btn {
     max-width: 190px;
@@ -130,24 +97,156 @@ body {
     box-shadow: 0px 4px 30px 0px rgba(0, 0, 0, 0.1);
 }
 
+.arrows {
+    width: 110px;
+    height: 45px;
+    border-radius: 22.5px;
+}
+
+//cтили элемента слайдера
+.slider-item {
+    &__item {
+        max-width: 361px;
+        background-color: #fff;
+        box-shadow: 0px 2px 4px 0px rgba(108, 111, 115, 0.1);
+    }
+
+    &__img {
+        @include bg;
+    }
+
+    &__title {
+        margin-bottom: 12px;
+        font-size: 20px;
+    }
+
+    &__box {
+        margin-bottom: 27px;
+        display: flex;
+        align-items: center;
+    }
+
+    &__author {
+        margin-left: 7px;
+    }
+
+    &__category {
+        outline: none;
+        margin-left: 21px;
+        color: $cat;
+        font-size: 15px;
+        height: 30px;
+    }
+
+
+    &__value {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px 30px;
+    }
+
+    &__info {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__price {
+        max-width: 100px;
+        margin-right: 13px;
+        border-radius: 15px;
+        font-size: 15px;
+        text-align: center;
+        padding: 0 10px;
+        font-family: 'Quicksand-Medium';
+    }
+
+    &__item-cart {
+        color: $blue;
+
+        &::before {
+            content: '\e82e';
+            font-size: 15px;
+            padding-right: 9px;
+        }
+    }
+
+    &__item-heart {
+        &::before {
+            content: '\e813';
+            color: $cat;
+            font-size: 15px;
+            padding-right: 10px;
+        }
+    }
+}
+
+//стилизация стрелок слайдера
+.slick-arrow {
+    position: absolute;
+    font-size: 0;
+    border: none;
+    width: 0;
+    height: 0;
+    padding: 0;
+    top: -120px;
+    cursor: pointer;
+}
+
+.slick-next {
+    font-family: 'Linearicons-Free';
+    color: #fff;
+    right: 67px;
+    cursor: pointer;
+    &::before {
+        content: '\e876';
+        font-size: 14px;
+
+    }
+}
+
+.slick-prev {
+    font-family: 'Linearicons-Free';
+    color: #fff;
+    right: 118px;
+    cursor: pointer;
+    &::before {
+        content: '\e875';
+        font-size: 14px;
+
+    }
+}
+
+//стилизация звездного рейтинга
+.jq-ry-normal-group svg {
+    fill: transparent;
+    stroke: #f39c12;
+    stroke-width: 20;
+}
+
 .icon-wordpress {
-    
+
     &::before {
         content: '\f19a';
         font-size: 15px;
         padding-right: 9px;
+        font-family: 'icomoon';
     }
 }
+
 .icon-html5 {
-    
+
     &::before {
         content: '\f13b';
         font-size: 15px;
         padding-right: 9px;
+        font-family: 'icomoon';
     }
 }
+
 .icon-psd {
-   
+
     &::before {
         content: '\f100';
         font-family: 'Flaticon';
