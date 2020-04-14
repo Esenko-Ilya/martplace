@@ -806,15 +806,59 @@
   &__item-star {
     margin-left: 15px;
   }
-
-  // &__inner{
-
-  //   & .slick-slide{
-  //     width: 361px !important;
-
-  //   }
-  //   & .slick-track >div+div {
-  //     margin-left: 28px;
-  //   }
-  // }
 }
+
+//end slider
+
+//start block achivments
+
+.achievements {
+  background-color: #212225;
+  padding: 97px 0;
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+  }
+
+  &__item {
+    width: 150px;
+  }
+
+  &__item-icon {
+    font-size: 48px;
+
+    & .lnr-briefcase {
+      color: #feb71d;
+    }
+
+    & .lnr-cloud-download {
+      color: #58c9e9;
+    }
+
+    & .lnr-smile {
+      color: #4f863c;
+    }
+
+    & .lnr-users {
+      color: #c4575a;
+    }
+  }
+
+  &__item-numb {
+    font-family: 'Quicksand';
+    font-size: 36px;
+    padding-top: 50px;
+    margin-bottom: 12px;
+  }
+
+  &__item-text {
+    font-size: 18px;
+    color: #fff;
+  }
+}
+
+
+//end block achivments
