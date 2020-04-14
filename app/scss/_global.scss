@@ -58,7 +58,7 @@ body {
     color: #000;
     font-size: 30px;
     line-height: 28px;
-    text-align: left;
+    
 
 }
 
@@ -253,4 +253,15 @@ body {
         font-size: 15px;
         padding-right: 9px;
     }
+}
+
+
+//2-х цветный тайтл
+.color-title {
+    font-size: 36px;
+    line-height: 28px;
+    color: #000000;
+}
+.title-blue {
+    color: $blue;
 }
