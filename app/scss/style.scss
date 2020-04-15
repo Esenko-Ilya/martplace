@@ -1,7 +1,6 @@
+@import "fonts";
 @import "vars";
 @import "global";
-@import "fonts";
-@import "libs";
 
 //start header
 .header {
@@ -28,6 +27,11 @@
     margin-right: 51px;
     text-align: center;
     list-style: none;
+
+    &:hover {
+      background-color: #fff;
+      color: $blue;
+    }
   }
 
   &__box {
@@ -39,59 +43,46 @@
 
   &__box-icons {
     margin-right: 48px;
-    position: relative;
+
   }
 
   &__box-icon {
     list-style: none;
     color: $grey;
     font-size: 20px;
+    position: relative;
 
     &+& {
       padding-left: 32px;
     }
   }
 
-  &__icon-red {
+  &__icon-red,
+  &__icon-green,
+  &__icon-blue {
     position: absolute;
-    background-color: #ff6a6c;
-    border-radius: 50%;
+    font-family: 'Quicksand';
+    border-radius: 11px;
     font-size: 14px;
     color: #fff;
     text-align: center;
-    padding-top: 3px;
-    width: 26px;
-    height: 22px;
-    top: -14px;
+    top: -13px;
+    padding: 4px 7px 4px
+  }
+
+  &__icon-red {
+    background-color: #ff6a6c;
     left: 10px;
   }
 
   &__icon-green {
-    position: absolute;
     background-color: #62d03b;
-    border-radius: 50%;
-    font-size: 14px;
-    color: #fff;
-    text-align: center;
-    padding-top: 3px;
-    width: 22px;
-    height: 22px;
-    top: -14px;
-    left: 69px;
+    left: 45px;
   }
 
   &__icon-blue {
-    position: absolute;
     background-color: $blue;
-    border-radius: 50%;
-    font-size: 14px;
-    color: #fff;
-    text-align: center;
-    width: 22px;
-    height: 22px;
-    top: -14px;
-    left: 128px;
-    padding-top: 3px;
+    left: 47px;
   }
 
   &__box-info {
@@ -102,15 +93,20 @@
 
   &__data {
     margin-left: 22px;
+    line-height: 22px;
+
   }
 
   &__data-name {
     color: $black;
-    font-weight: 500;
+    cursor: pointer;
+    font-family: 'Quicksand-Medium';
   }
 
   &__data-sum {
     color: $blue;
+    font-size: 15px;
+
   }
 
   //top header end
@@ -125,10 +121,10 @@
   &__menu-item {
     display: inline-block;
     text-transform: uppercase;
-    font-weight: 500;
+    font-family: 'Quicksand-Medium';
     list-style: none;
     font-size: 15px;
-    font-family: 'Quicksand Medium', sans-serif;
+
 
     &+& {
       margin-left: 34px;
@@ -137,6 +133,12 @@
 
   &__menu-link {
     color: $black;
+    transition: all .2s;
+
+    &:hover {
+      color: $blue;
+      border-bottom: 3px solid $blue;
+    }
   }
 
   &__search {
@@ -151,10 +153,12 @@
     border-radius: 23px;
     font-size: 15px;
     border: 1px solid #d9dfe5;
-    height: 46px;
-    padding-left: 23px;
-    padding-right: 100px;
+    padding: 14px 100px 14px 23px;
     outline: none;
+
+    &:focus {
+      border: 1px solid $blue;
+    }
 
     &::placeholder {
       color: #898f96;
@@ -170,13 +174,16 @@
     top: 0px;
     right: 0px;
     color: #fff;
-    min-height: 46px;
-    padding: 12px 27px;
+    padding: 14px 27px;
     border-radius: 23px;
     cursor: pointer;
     outline: none;
-  }
+    transition: all .3s;
 
+    &:hover {
+      padding: 14px 33px;
+    }
+  }
 }
 
 //header menu end
@@ -197,9 +204,9 @@
 
   &__title-bold {
     font-family: 'Quicksand-Bold';
-    font-weight: 700;
     font-size: 60px;
     margin-bottom: 8px;
+    text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.2);
   }
 
   &__text {
@@ -209,21 +216,14 @@
   }
 
   &__btn {
-    max-width: 190px;
-    width: 100%;
+    padding: 16px 31px 17px;
     color: #fff;
-    min-height: 55px;
-    padding: 19px 32px 18px;
     border: 1px solid #fff;
-    border-radius: 28px;
     margin: 0 15px;
-    text-align: center;
-    line-height: 30px;
 
     &:hover {
       background-color: #fff;
       color: $blue;
-      box-shadow: 0px 4px 30px 0px rgba(0, 0, 0, 0.1);
     }
   }
 }
@@ -239,7 +239,6 @@
     box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.08);
     border-radius: 6px;
     padding: 40px;
-    height: 135px;
     display: flex;
     justify-content: center;
     position: absolute;
@@ -250,7 +249,7 @@
     &::before {
       content: '';
       position: absolute;
-      max-width: 1100px;
+      max-width: 1110px;
       width: 100%;
       height: 13px;
       background-color: #f3f3f8;
@@ -281,38 +280,30 @@
 
   &__input {
     border: 1px solid #dcdcdc;
-    height: 55px;
-    margin: 0;
+    margin-right: 18px;
     width: 611px;
     border-top-left-radius: 6px;
     border-bottom-left-radius: 6px;
-    padding-left: 20px;
+    padding: 11px 50px 10px 20px;
     border-right: none;
-
-  }
-
-  &__select {
-    border: 1px solid #dcdcdc;
-    border-top-right-radius: 6px;
-    border-bottom-right-radius: 6px;
-    min-height: 55px;
-    margin: 0;
-    padding-left: 20px;
-    font-family: 'Quicksand', sans-serif;
-    appearance: none;
     outline: none;
-    padding-right: 60px;
+    line-height: 32px;
   }
 
   &__button {
-    min-height: 55px;
     background-color: $blue;
     color: #fff;
     border: none;
     border-radius: 4px;
-    padding: 10px 68px 10px;
-    margin-left: 10px;
+    padding: 19px 68px 18px;
+    cursor: pointer;
+    transition: all .3s;
 
+    &:hover {
+      background-color: #fff;
+      color: $blue;
+      border: 1px solid $blue;
+    }
   }
 }
 
@@ -322,21 +313,27 @@
 }
 
 .select2-container .select2-selection--single {
-  height: 55px;
   border: none;
   outline: none;
+  position: absolute;
+  left: -23px;
+  top: -30px;
+  color: $text;
 }
 
 .select2-container--default .select2-selection--single .select2-selection__rendered {
-  width: 195px;
-  height: 54px;
   border: 1px solid #dcdcdc;
   border-top-right-radius: 6px;
   border-bottom-right-radius: 6px;
-  position: absolute;
-  top: -1px;
-  right: 4px;
-  padding: 10px 20px;
+  padding: 12px 72px 13px 20px;
+
+  &::after {
+    content: '\e874';
+    font-size: 12px;
+    position: absolute;
+    right: 20px;
+    font-family: 'Linearicons-Free';
+  }
 }
 
 .select2-container--open {
@@ -348,8 +345,8 @@
 }
 
 .select2-container--open .select2-dropdown {
-  left: -4px;
-  top: -3px;
+  left: -23px;
+  top: 24px;
 }
 
 .select2-search {
@@ -357,24 +354,12 @@
 }
 
 .select2-container--default .select2-selection--single .select2-selection__arrow b {
+  display: none;
   border: none;
   margin: 0;
 }
 
-.select2-container--default .select2-selection--single .select2-selection__arrow {
-  font-family: 'Linearicons-Free';
-  width: 0;
-  height: 0;
-  position: relative;
 
-  &::after {
-    content: '\e874';
-    font-size: 12px;
-    position: absolute;
-    top: 10px;
-    right: -172px;
-  }
-}
 
 // Block advantages start
 .advantages {
@@ -389,7 +374,6 @@
   &__item {
     max-width: 360px;
     padding: 45px 32px 42px;
-    min-height: 401px;
 
     &:hover {
       box-shadow: 0px 2px 50px 0px rgba(0, 0, 0, 0.08)
@@ -416,16 +400,19 @@
 
   &__arrows {
     background-color: $cat;
+
   }
 
   &__inner {
     box-shadow: 0px 2px 30px 0px rgba(147, 155, 168, 0.1);
+
   }
 
   &__item {
     background-color: #fff;
     display: flex !important;
     justify-content: space-between;
+    border-radius: 4px;
   }
 
   &__item-img {
@@ -477,6 +464,16 @@
     padding-bottom: 45px;
   }
 
+  &__item-button {
+    cursor: pointer;
+    transition: all .3s;
+
+    &:hover {
+      background-color: $blue;
+      color: #fff;
+    }
+  }
+
   &__item-value {
     display: flex;
     justify-content: space-between;
@@ -507,6 +504,7 @@
       color: $cat;
       font-size: 15px;
       padding-right: 10px;
+      font-family: 'Linearicons-Free';
     }
   }
 
@@ -518,11 +516,14 @@
       font-size: 15px;
       padding-right: 9px;
       color: $blue;
+      font-family: 'Linearicons-Free';
     }
   }
 
   &__item-star {
     background-color: transparent;
+
+    &__link {}
   }
 }
 
@@ -753,24 +754,17 @@
   }
 
   &__btn-link {
-    display: block;
-    text-align: center;
+    margin: 0 auto;
     color: #fff;
     background-color: $blue;
-    max-width: 190px;
-    width: 100%;
-    min-height: 55px;
-    border-radius: 27.5px;
-    margin: 0 auto;
-    text-align: center;
-    box-shadow: 0px 4px 30px 0px rgba(0, 0, 0, 0.1);
-    border: none;
-    outline: none;
+    padding: 13px 32px 12px;
+    cursor: pointer;
 
     &:hover {
+      border: 1px solid $blue;
       background-color: #fff;
       color: $blue;
-
+      box-shadow: none;
     }
   }
 }
@@ -801,6 +795,11 @@
   &__item-avatar {
     width: 28px;
     height: 28px;
+  }
+
+  &__item-price {
+    background-color: rgba(6, 116, 236, 0.1);
+    color: $blue;
   }
 
   &__item-star {
@@ -869,13 +868,13 @@
 
   &__title {
     text-align: center;
-    margin-bottom: 28px;
+    margin-bottom: 27px;
   }
 
   &__text {
     text-align: center;
     max-width: 680px;
-    margin: 0  auto 60px;
+    margin: 0 auto 60px;
   }
 
   &__inner {
@@ -888,8 +887,7 @@
 
   &__item {
     max-width: 360px;
-    padding: 45px 32px 42px;
-    min-height: 401px;
+    padding: 50px 32px 55px;
     box-shadow: 0px 2px 50px 0px rgba(0, 0, 0, 0.08);
     margin-bottom: 30px;
     border-radius: 4px;
@@ -900,29 +898,36 @@
     font-size: 48px;
     color: rgba(92, 135, 248, 0.2);
     position: absolute;
-    top:20px;
-    left:17px;
+    top: 20px;
+    left: 17px;
+    font-family: 'Quicksand-Light';
   }
-  
+
 
   &__item-icon {
     font-size: 60px;
     margin-bottom: 41px;
+
     &.lnr-license {
-      color:$blue;
+      color: $blue;
     }
+
     &.lnr-magic-wand {
-      color:$cat;
+      color: $cat;
     }
+
     &.lnr-lock {
       color: #77de51;
     }
+
     &.lnr-chart-bars {
       color: #feb71d;
     }
+
     &.lnr-leaf {
       color: #58c9e9;
     }
+
     &.lnr-phone {
       color: #ff6a6d;
     }
@@ -933,13 +938,66 @@
     color: #000000;
     margin-bottom: 22px;
   }
-
-  &__item-text {
-  }
 }
 
-
-
-
-
 //end block choose
+
+// start block trade
+.trade {
+  display: flex;
+  justify-content: center;
+  &__item-blue {
+    background-image: url(../img/blue-bg.png);
+    background-size: cover;
+  }
+
+  &__item-purple {
+    background-image: url(../img/purple-bg.png);
+    background-size: cover;
+  }
+
+  &__item-inner {
+    padding: 100px 145px;
+    color: #fff;
+    text-align: center;
+  }
+
+  &__item-icon {
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 0 auto 48px;
+    max-width: 120px;
+    height: 100px;
+  }
+
+  &__item-title {
+    font-size: 36px;
+    margin-bottom: 26px;
+  }
+
+  &__item-text {
+    margin-bottom: 42px;
+  }
+
+  &__item-btn {
+    line-height: 20px;
+    background-color: #fff;
+    margin: 0 auto;
+    transition: all .4s;
+    &:hover{
+      background-color: transparent;
+      color: #fff;
+      border: 1px solid #fff;
+    }
+  }
+}
+.item-author {
+  color: $blue; 
+}
+
+.item-shopping {
+  color: $cat;
+  padding: 18px 40px 17px;
+}
+
+//end block trade

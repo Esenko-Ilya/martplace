@@ -18,14 +18,16 @@ $(function () {
     starWidth: '15px',
     readOnly: true,
     rating: 4.5,
-    spacing: '3px'
+    spacing: '3px',
+    ratedFill: '#ffc000'
   });
 
   $('.newest__item-star, .slider-feed__item-star').rateYo({
     starWidth: '13px',
     readOnly: true,
     rating: 4.5,
-    spacing: '3px'
+    spacing: '3px',
+    ratedFill: '#ffc000'
   });
 
   var mixer = mixitup('.newest__inner');

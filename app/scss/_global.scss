@@ -1,267 +1,307 @@
 html {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 *,
 *::before,
 *::after {
-    box-sizing: inherit;
+  box-sizing: inherit;
 }
 
 a {
-    text-decoration: none;
+  text-decoration: none;
 
 }
 
 ul,
 li {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 
 }
 
 body {
-    font-family: 'Quicksand', sans-serif;
-    font-size: 16px;
-    line-height: 30px;
-    font-weight: 400;
-    color: $text;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 16px;
+  line-height: 30px;
+  font-weight: 400;
+  color: $text;
 }
 
 .container {
-    max-width: 1170px;
-    margin: 0 auto;
-    padding: 0 15px;
+  max-width: 1170px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.container-fluid {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0 30px;
 }
 
 .avatar {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    @include bg;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  @include bg;
 }
 
 .title-block {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-radius: 4px;
-    width: 100%;
-    min-height: 110px;
-    padding: 40px 30px;
-    margin-bottom: 50px;
-    background-color: #fff;
-    box-shadow: 0px 2px 4px 0px rgba(108, 111, 115, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 4px;
+  width: 100%;
+  min-height: 110px;
+  padding: 40px 30px;
+  margin-bottom: 50px;
+  background-color: #fff;
+  box-shadow: 0px 2px 4px 0px rgba(108, 111, 115, 0.1);
 }
 
 .title-slider {
-    color: #000;
-    font-size: 30px;
-    line-height: 28px;
-    
+  color: #000;
+  font-size: 30px;
+  line-height: 28px;
+
 
 }
 
 .title-item {
-    font-size: 24px;
-    color: #000000;
-    text-align: left;
-    margin-bottom: 15px;
-    font-family: 'Quicksand-Medium';
-    line-height: 23px;
+  font-size: 24px;
+  color: #000000;
+  text-align: left;
+  margin-bottom: 15px;
+  font-family: 'Quicksand-Medium';
+  line-height: 23px;
 }
 
 .product__button {
-    height: 28px;
-    border-radius: 14px;
-    background-color: $button;
-    color: #868c96;
-    font-size: 15px;
-    border: none;
-    outline: none;
-    padding-left: 17px;
-    text-align: left;
-    padding-right: 14px;
+  height: 28px;
+  border-radius: 14px;
+  background-color: $button;
+  color: #868c96;
+  font-size: 15px;
+  border: none;
+  outline: none;
+  padding-left: 17px;
+  text-align: left;
+  padding-right: 14px;
 }
 
 
 
 .btn {
-    max-width: 190px;
-    width: 100%;
-    min-height: 55px;
-    padding: 19px 32px 18px;
-    border-radius: 27.5px;
-    margin: 0 15px;
-    text-align: center;
-    box-shadow: 0px 4px 30px 0px rgba(0, 0, 0, 0.1);
+  padding: 18px 26px 17px;
+  border-radius: 27.5px;
+  text-align: center;
+  box-shadow: 0px 4px 30px 0px rgba(0, 0, 0, 0.1);
 }
 
 .arrows {
-    width: 110px;
-    height: 45px;
-    border-radius: 22.5px;
+  width: 110px;
+  height: 45px;
+  border-radius: 22.5px;
 }
 
 //cтили элемента слайдера
 .slider-item {
-    &__item {
-        max-width: 361px;
-        background-color: #fff;
-        box-shadow: 0px 2px 4px 0px rgba(108, 111, 115, 0.1);
+  &__item {
+    max-width: 361px;
+    background-color: #fff;
+    box-shadow: 0px 2px 4px 0px rgba(108, 111, 115, 0.1);
+  }
+
+  &__img {
+    @include bg;
+  }
+
+  &__title {
+    margin-bottom: 12px;
+    font-size: 20px;
+  }
+
+  &__box {
+    margin-bottom: 27px;
+    display: flex;
+    align-items: center;
+  }
+
+  &__author {
+    margin-left: 7px;
+  }
+
+  &__category {
+    outline: none;
+    margin-left: 21px;
+    color: $cat;
+    font-size: 15px;
+    height: 30px;
+  }
+
+
+  &__value {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+  }
+
+  &__info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__price {
+    max-width: 100px;
+    margin-right: 13px;
+    border-radius: 15px;
+    font-size: 15px;
+    text-align: center;
+    padding: 0 10px;
+    font-family: 'Quicksand-Medium';
+  }
+
+  &__item-cart {
+    color: $blue;
+
+    &::before {
+      content: '\e82e';
+      font-size: 15px;
+      padding-right: 9px;
     }
+  }
 
-    &__img {
-        @include bg;
+  &__item-heart {
+    &::before {
+      content: '\e813';
+      color: $cat;
+      font-size: 15px;
+      padding-right: 10px;
     }
-
-    &__title {
-        margin-bottom: 12px;
-        font-size: 20px;
-    }
-
-    &__box {
-        margin-bottom: 27px;
-        display: flex;
-        align-items: center;
-    }
-
-    &__author {
-        margin-left: 7px;
-    }
-
-    &__category {
-        outline: none;
-        margin-left: 21px;
-        color: $cat;
-        font-size: 15px;
-        height: 30px;
-    }
-
-
-    &__value {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 15px 30px;
-    }
-
-    &__info {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-
-    &__price {
-        max-width: 100px;
-        margin-right: 13px;
-        border-radius: 15px;
-        font-size: 15px;
-        text-align: center;
-        padding: 0 10px;
-        font-family: 'Quicksand-Medium';
-    }
-
-    &__item-cart {
-        color: $blue;
-
-        &::before {
-            content: '\e82e';
-            font-size: 15px;
-            padding-right: 9px;
-        }
-    }
-
-    &__item-heart {
-        &::before {
-            content: '\e813';
-            color: $cat;
-            font-size: 15px;
-            padding-right: 10px;
-        }
-    }
+  }
 }
 
 //стилизация стрелок слайдера
 .slick-arrow {
-    position: absolute;
-    font-size: 0;
-    border: none;
-    width: 0;
-    height: 0;
-    padding: 0;
-    top: -120px;
-    cursor: pointer;
+  position: absolute;
+  font-size: 0;
+  border: none;
+  width: 0;
+  height: 0;
+  padding: 0;
+  top: -120px;
+  cursor: pointer;
 }
 
 .slick-next {
-    font-family: 'Linearicons-Free';
-    color: #fff;
-    right: 67px;
-    cursor: pointer;
-    &::before {
-        content: '\e876';
-        font-size: 14px;
+  font-family: 'Linearicons-Free';
+  color: #fff;
+  right: 77px;
+  cursor: pointer;
 
-    }
+  &:hover {
+    font-weight: 900;
+  }
+
+  &::before {
+    content: '\e876';
+    font-size: 14px;
+    padding: 10px;
+  }
+
+
 }
 
 .slick-prev {
-    font-family: 'Linearicons-Free';
-    color: #fff;
-    right: 118px;
-    cursor: pointer;
-    &::before {
-        content: '\e875';
-        font-size: 14px;
-
-    }
+  font-family: 'Linearicons-Free';
+  color: #fff;
+  right: 128px;
+  cursor: pointer;
+  &:hover {
+    font-weight: 900;
+  }
+  &::before {
+    content: '\e875';
+    font-size: 14px;
+    padding: 10px;
+  }
 }
 
 //стилизация звездного рейтинга
 .jq-ry-normal-group svg {
-    fill: transparent;
-    stroke: #f39c12;
-    stroke-width: 20;
+  fill: transparent;
+  stroke: #f39c12;
+  stroke-width: 20;
 }
 
 .icon-wordpress {
 
-    &::before {
-        content: '\f19a';
-        font-size: 15px;
-        padding-right: 9px;
-        font-family: 'icomoon';
-    }
+  &::before {
+    content: '\f19a';
+    font-size: 15px;
+    padding-right: 9px;
+    font-family: 'icomoon';
+  }
 }
 
 .icon-html5 {
 
-    &::before {
-        content: '\f13b';
-        font-size: 15px;
-        padding-right: 9px;
-        font-family: 'icomoon';
-    }
+  &::before {
+    content: '\f13b';
+    font-size: 15px;
+    padding-right: 9px;
+    font-family: 'icomoon';
+  }
 }
 
 .icon-psd {
 
-    &::before {
-        content: '\f100';
-        font-family: 'Flaticon';
-        font-size: 15px;
-        padding-right: 9px;
-    }
+  &::before {
+    content: '\f100';
+    font-family: 'Flaticon';
+    font-size: 15px;
+    padding-right: 9px;
+  }
 }
 
 
 //2-х цветный тайтл
 .color-title {
-    font-size: 36px;
-    line-height: 28px;
-    color: #000000;
+  font-size: 36px;
+  line-height: 28px;
+  color: #000000;
 }
+
 .title-blue {
+  color: $blue;
+}
+
+//значок like для item'ов 
+.item-like {
+  color: $text;
+
+  &::before {
+    content: '\e813';
+    color: $cat;
+    font-size: 15px;
+    padding-right: 10px;
+    font-family: 'Linearicons-Free';
+  }
+}
+
+//значок cart для item'ов 
+
+.item-cart {
+  color: $blue;
+
+  &::before {
+    content: '\e82e';
+    font-size: 15px;
+    padding-right: 9px;
     color: $blue;
+    font-family: 'Linearicons-Free';
+  }
 }

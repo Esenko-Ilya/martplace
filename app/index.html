@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>MartPlace</title>
+  <link rel="stylesheet" href="css/libs.css">
   <link rel="stylesheet" href="css/style.min.css">
 </head>
 
@@ -15,26 +16,26 @@
     <div class="header__top">
       <div class="container">
         <div class="header__inner">
-          <a class="header__inner-logo href=""><img src=" img/logo.png" alt=""></img>
-            <a class="header__inner-btn" href="#">Become a Seller</a>
-            <div class="header__box">
-              <div class="header__box-icons">
-                <a class="header__box-icon lnr lnr-alarm" href="#"><span class="header__icon-red">25</span></a>
-                <a class="header__box-icon lnr lnr-envelope" href="#"><span class="header__icon-green">6</span></a>
-                <a class="header__box-icon lnr lnr-cart" href="#"><span class="header__icon-blue">2</span></a>
-              </div>
-              <div class="header__box-info">
-                <a class="avatar" href="#" style="background-image: url(img/user-logo.jpg);"></a>
-                <div class="header__data">
-                  <div class="header__data-name">
-                    Taofiq Hakim
-                  </div>
-                  <div class="header__data-sum">
-                    $20.45
-                  </div>
+          <a class="header__inner-logo" href="#"><img src=" img/logo.png" alt=""></img></a>
+          <a class="header__inner-btn" href="#">Become a Seller</a>
+          <div class="header__box">
+            <div class="header__box-icons">
+              <a class="header__box-icon lnr lnr-alarm" href="#"><span class="header__icon-red">25</span></a>
+              <a class="header__box-icon lnr lnr-envelope" href="#"><span class="header__icon-green">6</span></a>
+              <a class="header__box-icon lnr lnr-cart" href="#"><span class="header__icon-blue">2</span></a>
+            </div>
+            <div class="header__box-info">
+              <a class="avatar" href="#" style="background-image: url(img/user-logo.jpg);"></a>
+              <div class="header__data">
+                <a href="#" class="header__data-name">
+                  Taofiq Hakim
+                </a>
+                <div class="header__data-sum">
+                  $20.45
                 </div>
               </div>
             </div>
+          </div>
         </div>
       </div>
     </div>
@@ -73,13 +74,12 @@
         MartPlace is the most powerful, & customizable template for Easy Digital Downloads Products
       </div>
       <div class="digital__box">
-        <a class="digital__btn digital__btn-all standart-btn" href="#">View All Products</a>
-        <a class="digital__btn digital__btn-popular" href="#">Popular Products</a>
+        <a class="digital__btn btn" href="#">View All Products</a>
+        <a class="digital__btn btn" href="#">Popular Products</a>
       </div>
 
     </div>
   </section>
-
 
   <section class="search">
     <div class="container">
@@ -173,15 +173,19 @@
               quam aliquet congue justo ut scelerisque.
             </div>
             <div class="slider-weekly__item-buttons">
-              <button class="slider-weekly__item-button product__button" type="submit">website</button>
-              <button class="slider-weekly__item-button product__button" type="submit">plugin</button>
-              <button class="slider-weekly__item-button product__button" type="submit">landing page</button>
+              <button class="slider-weekly__item-button product__button" type="button">website</button>
+              <button class="slider-weekly__item-button product__button" type="button">plugin</button>
+              <button class="slider-weekly__item-button product__button" type="button">landing page</button>
             </div>
             <div class="slider-weekly__item-value">
               <div class="slider-weekly__item-info">
                 <div class="slider-weekly__item-price slider-item__price">$10 - $50</div>
-                <a class="slider-weekly__item-like lnr" href="#">46</a>
-                <a class="slider-weekly__item-cart lnr" href="#">634</a>
+                <a class="slider-weekle__link" href="#">
+                  <span class="slider-weekly__item-like item-like">46</span>
+                </a>
+                <a class="slider-weekle__link" href="#">
+                  <span class="slider-weekly__item-cart item-cart">634</span>
+                </a>
               </div>
               <div class="slider-weekly__item-star">
                 <div class="rate-star"></div>
@@ -210,15 +214,60 @@
               quam aliquet congue justo ut scelerisque.
             </div>
             <div class="slider-weekly__item-buttons">
-              <button class="slider-weekly__item-button product__button" type="submit">website</button>
-              <button class="slider-weekly__item-button product__button" type="submit">plugin</button>
-              <button class="slider-weekly__item-button product__button" type="submit">landing page</button>
+              <button class="slider-weekly__item-button product__button" type="button">website</button>
+              <button class="slider-weekly__item-button product__button" type="button">plugin</button>
+              <button class="slider-weekly__item-button product__button" type="button">landing page</button>
             </div>
             <div class="slider-weekly__item-value">
               <div class="slider-weekly__item-info">
                 <div class="slider-weekly__item-price slider-item__price">$10 - $50</div>
-                <a class="slider-weekly__item-like lnr" href="#">46</a>
-                <a class="slider-weekly__item-cart lnr" href="#">634</a>
+                <a class="slider-weekle__link" href="#">
+                  <span class="slider-weekly__item-like item-like">46</span>
+                </a>
+                <a class="slider-weekle__link" href="#">
+                  <span class="slider-weekly__item-cart item-cart">634</span>
+                </a>
+              </div>
+              <div class=" slider-weekly__item-star">
+                <div class="rate-star"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="slider-weekly__item">
+          <div alt="" class="slider-weekly__item-img"
+            style="background-image: url(img/content/slider-weekly-img1.jpg);">
+          </div>
+          <div class="slider-weekly__item-content">
+            <div class="slider-weekly__item-title title-item">
+              One Page Resume Template
+            </div>
+            <div class="slider-weekly__item-box">
+              <a class="slider-weekly__item-avatar avatar" href="#"
+                style="background-image: url(img/user-logo.jpg);"></a>
+              <a class="slider-weekly__item-author item-author" href="#">AazzTech</a>
+              <a class="slider-weekly__item-category slider-item__category icon-wordpress" href="#">WordPress</a>
+            </div>
+            <div class="slider-weekly__item-text">
+              Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque the mattis, leo quam
+              aliquet congue placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque the mattis,
+              leo
+              quam aliquet congue justo ut scelerisque.
+            </div>
+            <div class="slider-weekly__item-buttons">
+              <button class="slider-weekly__item-button product__button" type="button">website</button>
+              <button class="slider-weekly__item-button product__button" type="button">plugin</button>
+              <button class="slider-weekly__item-button product__button" type="button">landing page</button>
+            </div>
+            <div class="slider-weekly__item-value">
+              <div class="slider-weekly__item-info">
+                <div class="slider-weekly__item-price slider-item__price">$10 - $50</div>
+                <a class="slider-weekle__link" href="#">
+                  <span class="slider-weekly__item-like item-like">46</span>
+                </a>
+                <a class="slider-weekle__link" href="#">
+                  <span class="slider-weekly__item-cart item-cart">634</span>
+                </a>
               </div>
               <div class="slider-weekly__item-star">
                 <div class="rate-star"></div>
@@ -247,52 +296,19 @@
               quam aliquet congue justo ut scelerisque.
             </div>
             <div class="slider-weekly__item-buttons">
-              <button class="slider-weekly__item-button product__button" type="submit">website</button>
-              <button class="slider-weekly__item-button product__button" type="submit">plugin</button>
-              <button class="slider-weekly__item-button product__button" type="submit">landing page</button>
+              <button class="slider-weekly__item-button product__button" type="button">website</button>
+              <button class="slider-weekly__item-button product__button" type="button">plugin</button>
+              <button class="slider-weekly__item-button product__button" type="button">landing page</button>
             </div>
             <div class="slider-weekly__item-value">
               <div class="slider-weekly__item-info">
                 <div class="slider-weekly__item-price slider-item__price">$10 - $50</div>
-                <a class="slider-weekly__item-like lnr" href="#">46</a>
-                <a class="slider-weekly__item-cart lnr" href="#">634</a>
-              </div>
-              <div class="slider-weekly__item-star">
-                <div class="rate-star"></div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="slider-weekly__item">
-          <div alt="" class="slider-weekly__item-img"
-            style="background-image: url(img/content/slider-weekly-img1.jpg);">
-          </div>
-          <div class="slider-weekly__item-content">
-            <div class="slider-weekly__item-title title-item">
-              One Page Resume Template
-            </div>
-            <div class="slider-weekly__item-box">
-              <a class="slider-weekly__item-avatar avatar" href="#"
-                style="background-image: url(img/user-logo.jpg);"></a>
-              <a class="slider-weekly__item-author item-author" href="#">AazzTech</a>
-              <a class="slider-weekly__item-category slider-item__category icon-wordpress" href="#">WordPress</a>
-            </div>
-            <div class="slider-weekly__item-text">
-              Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque the mattis, leo quam
-              aliquet congue placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque the mattis,
-              leo
-              quam aliquet congue justo ut scelerisque.
-            </div>
-            <div class="slider-weekly__item-buttons">
-              <button class="slider-weekly__item-button product__button" type="submit">website</button>
-              <button class="slider-weekly__item-button product__button" type="submit">plugin</button>
-              <button class="slider-weekly__item-button product__button" type="submit">landing page</button>
-            </div>
-            <div class="slider-weekly__item-value">
-              <div class="slider-weekly__item-info">
-                <div class="slider-weekly__item-price slider-item__price">$10 - $50</div>
-                <a class="slider-weekly__item-like lnr" href="#">46</a>
-                <a class="slider-weekly__item-cart lnr" href="#">634</a>
+                <a class="slider-weekle__link" href="#">
+                  <span class="slider-weekly__item-like item-like">46</span>
+                </a>
+                <a class="slider-weekle__link" href="#">
+                  <span class="slider-weekly__item-cart item-cart">634</span>
+                </a>
               </div>
               <div class="slider-weekly__item-star">
                 <div class="rate-star"></div>
@@ -312,7 +328,6 @@
           Weekly Featured Products
         </div>
         <div class="newest__filter">Filter by:<span class="newest__filter-point"></span></div>
-
         <ul class="newest__filter-list">
           <li class="newest__filter-item"><a class="newest__filter-link" href="#">Trending items</a></li>
           <li class="newest__filter-item"><a class="newest__filter-link" href="#">Best seller</a></li>
@@ -361,12 +376,12 @@
           <div class="newest__item-value slider-item__value">
             <div class="newest__item-info slider-item__info">
               <div class="newest__item-price slider-item__price">$20</div>
-              <a class="newest__item-like slider-item__item-heart lnr" href="#">90</a>
+              <a class="newest__item-link" href="#"><span class="slider-feed__item-like item-like">90</span></a>
             </div>
-            <a class="newest__item-cart slider-item__item-cart lnr" href="#">264</a>
+            <a class="newest__item-link" href="#"><span class="slider-feed__item-cart item-cart">264</span></a>
           </div>
-
         </div>
+
         <div class="newest__item slider-item__item mix category-psd">
           <div class="newest__item-img slider-item__img" style="background-image: url(img/content/sort-item1.png);">
             <a href="" class="newest__item-btn btn-info">More Info</a>
@@ -389,9 +404,9 @@
           <div class="newest__item-value slider-item__value">
             <div class="newest__item-info slider-item__info">
               <div class="newest__item-price slider-item__price">$18</div>
-              <a class="newest__item-like slider-item__item-heart lnr" href="#">48</a>
+              <a class="newest__item-link" href="#"><span class="slider-feed__item-like item-like">48</span></a>
             </div>
-            <a class="newest__item-cart slider-item__item-cart lnr" href="#">50</a>
+            <a class="newest__item-link" href="#"><span class="slider-feed__item-cart item-cart">50</span></a>
           </div>
 
         </div>
@@ -417,10 +432,10 @@
           <div class="newest__item-value slider-item__value">
             <div class="newest__item-info slider-item__info">
               <div class="newest__item-price slider-item__price">$10</div>
-              <a class="newest__item-like slider-item__item-heart lnr" href="#">56</a>
+              <a class="newest__item-link" href="#"><span class="slider-feed__item-like item-like">56</span></a>
               <div class="newest__item-star"></div>
             </div>
-            <a class="newest__item-cart slider-item__item-cart lnr" href="#">68</a>
+            <a class="newest__item-link" href="#"><span class="slider-feed__item-cart item-cart">68</span></a>
           </div>
 
         </div>
@@ -446,10 +461,10 @@
           <div class="newest__item-value slider-item__value">
             <div class="newest__item-info slider-item__info">
               <div class="newest__item-price slider-item__price">$10 - 50</div>
-              <a class="newest__item-like slider-item__item-heart lnr" href="#">90</a>
+              <a class="newest__item-link" href="#"><span class="slider-feed__item-like item-like">90</span></a>
               <div class="newest__item-star"></div>
             </div>
-            <a class="newest__item-cart slider-item__item-cart lnr" href="#">45</a>
+            <a class="newest__item-link" href="#"><span class="slider-feed__item-cart item-cart">45</span></a>
           </div>
 
         </div>
@@ -475,9 +490,10 @@
           <div class="newest__item-value slider-item__value">
             <div class="newest__item-info slider-item__info">
               <div class="newest__item-price slider-item__price">$20</div>
-              <a class="newest__item-like slider-item__item-heart lnr" href="#">90</a>
+              <a class="newest__item-link" href="#"><span class="slider-feed__item-like item-like">48</span></a>
+
             </div>
-            <a class="newest__item-cart slider-item__item-cart lnr" href="#">264</a>
+            <a class="newest__item-link" href="#"><span class="slider-feed__item-cart item-cart">50</span></a>
           </div>
 
         </div>
@@ -503,15 +519,16 @@
           <div class="newest__item-value slider-item__value">
             <div class="newest__item-info slider-item__info">
               <div class="newest__item-price slider-item__price">$10</div>
-              <a class="newest__item-like slider-item__item-heart lnr" href="#">56</a>
+              <a class="newest__item-link" href="#"><span class="slider-feed__item-like item-like">56</span></a>
               <div class="newest__item-star"></div>
             </div>
-            <a class="newest__item-cart slider-item__item-cart lnr" href="#">68</a>
+            <a class="newest__item-link" href="#"><span class="slider-feed__item-cart item-cart">68</span></a>
           </div>
 
         </div>
+        <a class="newest__btn-link btn" data-filter="all">View All Products</a>
       </div>
-      <button class="newest__btn-link" data-filter="all">View All Products</button>
+      
 
     </div>
   </section>
@@ -520,11 +537,12 @@
     <div class="container">
       <div class="slider-feed__top title-block">
         <div class="slider-feed__title title-slider">
-          Weekly Featured Products
+          Weekly Followers Feed
         </div>
         <div class="slider-feed__arrows arrows"></div>
       </div>
       <div class="slider-feed__inner">
+
         <div class="slider-feed__item slider-item__item mix category-plugin">
           <div class="slider-feed__item-img slider-item__img"
             style="background-image: url(img/content/sort-item1.png);">
@@ -546,13 +564,14 @@
           <div class="slider-feed__item-value slider-item__value">
             <div class="slider-feed__item-info slider-item__info">
               <div class="slider-feed__item-price slider-item__price">$20</div>
-              <a class="slider-feed__item-like slider-item__item-heart lnr" href="#">90</a>
+              <a class="slider-feed__item-link" href="#"><span class="slider-feed__item-like item-like">90</span></a>
               <div class="slider-feed__item-star"></div>
             </div>
-            <a class="slider-feed__item-cart slider-item__item-cart lnr" href="#">264</a>
+            <a class="slider-feed__item-link" href="#"><span class="slider-feed__item-cart item-cart">264</span></a>
           </div>
 
         </div>
+
         <div class="slider-feed__item slider-item__item mix category-psd">
           <div class="slider-feed__item-img slider-item__img"
             style="background-image: url(img/content/sort-item1.png);">
@@ -575,16 +594,15 @@
           <div class="slider-feed__item-value slider-item__value">
             <div class="slider-feed__item-info slider-item__info">
               <div class="slider-feed__item-price slider-item__price">$18</div>
-              <a class="slider-feed__item-like slider-item__item-heart lnr" href="#">48</a>
+              <a class="slider-feed__item-link" href="#"><span class="slider-feed__item-like item-like">48</span></a>
             </div>
-            <a class="slider-feed__item-cart slider-item__item-cart lnr" href="#">50</a>
+            <a class="slider-feed__item-link" href="#"><span class="slider-feed__item-cart item-cart">36</span></a>
           </div>
-
         </div>
+
         <div class="slider-feed__item slider-item__item mix category-landing">
           <div class="slider-feed__item-img slider-item__img"
             style="background-image: url(img/content/sort-item1.png);">
-
           </div>
           <div class="slider-feed__item-content">
             <div class="slider-feed__item-title slider-item__title title-item">
@@ -603,18 +621,16 @@
           <div class="slider-feed__item-value slider-item__value">
             <div class="slider-feed__item-info slider-item__info">
               <div class="slider-feed__item-price slider-item__price">$10</div>
-              <a class="slider-feed__item-like slider-item__item-heart lnr" href="#">56</a>
-              <div class="newest__item-star"></div>
+              <a class="slider-feed__item-link" href="#"><span class="slider-feed__item-like item-like">56</span></a>
+              <div class="slider-feed__item-star"></div>
             </div>
-            <a class="slider-feed__item-cart slider-item__item-cart lnr" href="#">68</a>
+            <a class="slider-feed__item-link" href="#"><span class="slider-feed__item-cart item-cart">68</span></a>
           </div>
-
         </div>
 
         <div class="slider-feed__item slider-item__item mix category-plugin">
           <div class="slider-feed__item-img slider-item__img"
             style="background-image: url(img/content/sort-item1.png);">
-
           </div>
           <div class="slider-feed__item-content">
             <div class="slider-feed__item-title slider-item__title title-item">
@@ -633,17 +649,16 @@
           <div class="slider-feed__item-value slider-item__value">
             <div class="slider-feed__item-info slider-item__info">
               <div class="slider-feed__item-price slider-item__price">$20</div>
-              <a class="slider-feed__item-like slider-item__item-heart lnr" href="#">90</a>
+              <a class="slider-feed__item-link" href="#"><span class="slider-feed__item-like item-like">90</span></a>
+              <div class="slider-feed__item-star"></div>
             </div>
-            <a class="slider-feed__item-cart slider-item__item-cart lnr" href="#">264</a>
-            <div class="slider-feed__item-star"></div>
+            <a class="slider-feed__item-link" href="#"><span class="slider-feed__item-cart item-cart">264</span></a>
           </div>
-
         </div>
+
         <div class="slider-feed__item slider-item__item mix category-psd">
           <div class="slider-feed__item-img slider-item__img"
             style="background-image: url(img/content/sort-item1.png);">
-
           </div>
           <div class="slider-feed__item-content">
             <div class="slider-feed__item-title slider-item__title title-item">
@@ -662,12 +677,15 @@
           <div class="slider-feed__item-value slider-item__value">
             <div class="slider-feed__item-info slider-item__info">
               <div class="slider-feed__item-price slider-item__price">$18</div>
-              <a class="slider-feed__item-like slider-item__item-heart lnr" href="#">48</a>
+              <a class="slider-feed__item-link" href="#"><span class="slider-feed__item-like item-like">48</span></a>
+
             </div>
-            <a class="slider-feed__item-cart slider-item__item-cart lnr" href="#">50</a>
+            <a class="slider-feed__item-link" href="#"><span class="slider-feed__item-cart item-cart">50</span></a>
+
           </div>
 
         </div>
+
         <div class="slider-feed__item slider-item__item mix category-landing">
           <div class="slider-feed__item-img slider-item__img"
             style="background-image: url(img/content/sort-item1.png);">
@@ -690,18 +708,16 @@
           <div class="slider-feed__item-value slider-item__value">
             <div class="slider-feed__item-info slider-item__info">
               <div class="slider-feed__item-price slider-item__price">$10</div>
-              <a class="slider-feed__item-like slider-item__item-heart lnr" href="#">56</a>
+              <a class="slider-feed__item-link" href="#"><span class="slider-feed__item-like item-like">56</span></a>
               <div class="slider-feed__item-star"></div>
             </div>
-            <a class="slider-feed__item-cart slider-item__item-cart lnr" href="#">68</a>
+            <a class="slider-feed__item-link" href="#"><span class="slider-feed__item-cart item-cart">68</span></a>
           </div>
-
         </div>
 
       </div>
     </div>
   </section>
-
 
   <section class="achievements">
     <div class="container">
@@ -751,7 +767,6 @@
     </div>
   </section>
 
-
   <section class="choose">
     <div class="container">
       <div class="choose__title color-title">
@@ -762,7 +777,7 @@
         laborum dolo rumes fugats untras.
       </div>
       <div class="choose__inner">
-        
+
         <div class="choose__item">
           <span class="choose__item-numb">01</span>
           <div class="choose__item-icon lnr lnr-license"></div>
@@ -842,6 +857,38 @@
         </div>
       </div>
     </div>
+  </section>
+
+  <section class="trade">
+
+    <div class="trade__item-blue">
+      <div class="trade__item-inner">
+        <div class="trade__item-icon" style='background-image: url(img/content/trade-item1.png);'></div>
+        <div class="trade__item-title">
+          Sell Your Products
+        </div>
+        <div class="trade__item-text">
+          Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque
+          the mattis, leo quam aliquet diamcongue is laoreet elit metus.
+        </div>
+        <a href="#" class=" trade__item-btn btn item-author">Become an Author</a>
+      </div>  
+    </div>
+    <div class="trade__item-purple">
+      <div class="trade__item-inner">
+        <div class="trade__item-icon" style='background-image: url(img/content/trade-item2.png);'></div>
+        <div class="trade__item-title">
+          Start Shopping Today
+        </div>
+        <div class="trade__item-text">
+          Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque
+          the mattis, leo quam aliquet diamcongue is laoreet elit metus.
+        </div>
+        <a href="#" class="trade__item-btn btn item-shopping">Start Shopping</a>
+      </div>  
+    </div>
+
+
   </section>
 
 

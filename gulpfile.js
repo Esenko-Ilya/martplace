@@ -30,8 +30,8 @@ gulp.task('css', function(){
     'node_modules/select2/dist/css/select2.css',
     'node_modules/rateyo/src/jquery.rateyo.css',
   ])
-    .pipe(concat('_libs.scss'))
-    .pipe(gulp.dest('app/scss'))
+    .pipe(concat('libs.css'))
+    .pipe(gulp.dest('app/css'))
     .pipe(browserSync.reload({stream: true}))
 });
 
