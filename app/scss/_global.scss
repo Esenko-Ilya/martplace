@@ -273,6 +273,7 @@ body {
   font-size: 36px;
   line-height: 28px;
   color: #000000;
+  text-align: center;
 }
 
 .title-blue {
@@ -305,3 +306,37 @@ body {
     font-family: 'Linearicons-Free';
   }
 }
+
+
+.item-clock {
+  color: $text;
+
+  &::before {
+    content: '\e864';
+    font-size: 15px;
+    padding-right: 7px;
+    color: $blue;
+    font-family: 'Linearicons-Free';
+  }
+}
+.item-bubble {
+  color: $text;
+
+  &::before {
+    content: '\e83f';
+    font-size: 15px;
+    padding-right: 7px;
+    font-family: 'Linearicons-Free';
+  }
+}
+.item-eye {
+  color: $text;
+
+  &::before {
+    content: '\e81b';
+    font-size: 15px;
+    padding-right: 6px;
+    font-family: 'Linearicons-Free';
+  }
+}
+

@@ -522,8 +522,6 @@
 
   &__item-star {
     background-color: transparent;
-
-    &__link {}
   }
 }
 
@@ -769,7 +767,7 @@
   }
 }
 
-//end start block
+//end block
 
 //start slider-feed block
 
@@ -946,6 +944,7 @@
 .trade {
   display: flex;
   justify-content: center;
+
   &__item-blue {
     background-image: url(../img/blue-bg.png);
     background-size: cover;
@@ -984,15 +983,17 @@
     background-color: #fff;
     margin: 0 auto;
     transition: all .4s;
-    &:hover{
+
+    &:hover {
       background-color: transparent;
       color: #fff;
       border: 1px solid #fff;
     }
   }
 }
+
 .item-author {
-  color: $blue; 
+  color: $blue;
 }
 
 .item-shopping {
@@ -1001,3 +1002,164 @@
 }
 
 //end block trade
+
+//start block feedback
+.feedback {
+  padding: 120px 0;
+
+  &__title {
+    text-align: center;
+    padding-bottom: 30px;
+  }
+
+  &__text {
+    text-align: center;
+    padding: 0 230px;
+    margin-bottom: 56px;
+  }
+
+
+  &__items {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__item {
+    box-shadow: 0px 2px 50px 0px rgba(0, 0, 0, 0.08);
+    border-bottom-right-radius: 4px;
+    border-top-right-radius: 4px;
+    border-left: 2px solid $blue;
+    margin-bottom: 73px;
+    padding: 50px 40px 42px;
+
+    &+& {
+      margin-left: 30px;
+    }
+  }
+
+  &__item-box {
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin-bottom: 23px;
+
+    &::before {
+      content: "\e83f";
+      font-family: 'Linearicons-Free';
+      color: #e8e8e8;
+      font-size: 60px;
+      position: absolute;
+      right: 0;
+      top: 12px;
+    }
+  }
+
+  &__item-avatar {
+    width: 80px;
+    height: 80px;
+    margin-right: 19px;
+  }
+
+  &__item-name {
+    color: #000000;
+    font-size: 20px;
+    font-family: 'Quicksand-Medium';
+  }
+
+  &__btn {
+    margin: 0 auto;
+    color: #fff;
+    background-color: $blue;
+    padding: 18px 34px 17px;
+    cursor: pointer;
+
+    &:hover {
+      border: 1px solid $blue;
+      background-color: #fff;
+      color: $blue;
+      box-shadow: none;
+    }
+  }
+}
+
+//end block feedback
+
+//start block new
+
+.news {
+  background-color: $bg;
+  padding: 120px 0;
+
+  &__title {
+    margin-bottom: 28px;
+  }
+
+  &__text {
+    text-align: center;
+    margin-bottom: 56px;
+    padding: 0 215px;
+  }
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__item {
+    max-width: 361px;
+    box-shadow: 0px 2px 50px 0px rgba(0, 0, 0, 0.08);
+    border-radius: 4px;
+    background-color: #fff;
+
+    &+& {
+      margin-left: 28px;
+    }
+
+  }
+
+  &__item-img {
+    
+    height: 230px;
+    @include bg;
+  }
+
+  &__item-content {
+    padding: 40px 30px;
+    border-bottom: 1px solid #ececec;
+  }
+
+  &__item-title {
+    margin-bottom: 21px;
+    font-size: 22px;
+  }
+
+  &__item-text {}
+
+  &__item-statistic {
+    display: flex;
+    padding: 14px 30px;
+    font-size: 15px;
+  }
+
+  &__item-date {
+   padding-right: 45px;
+   position: relative;
+   &::before{
+     content: '';
+     height: 40px;
+     width: 1px;
+     background-color: #ececec;
+      position: absolute;
+      right: 0;
+      top: -3px;
+   }
+  }
+
+  &__item-link {
+    padding-left: 31px;
+  }
+}
+
+
+
+//end block new
