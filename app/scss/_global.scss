@@ -8,6 +8,11 @@ html {
   box-sizing: inherit;
 }
 
+html,
+body {
+  height: 100%;
+}
+
 a {
   text-decoration: none;
 
@@ -26,6 +31,20 @@ body {
   line-height: 30px;
   font-weight: 400;
   color: $text;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+
+.content {
+  flex: 1 0 auto;
+}
+
+.footer {
+  flex: 0 0 auto;
 }
 
 .container {
@@ -315,5 +334,15 @@ body {
     font-size: 15px;
     padding-right: 6px;
     font-family: 'Linearicons-Free';
+  }
+}
+
+.item-envelope{
+  
+  &::before{
+    content: '\e818';
+    font-size: 15px;
+    font-family: 'Linearicons-Free';
+    color: $blue;
   }
 }

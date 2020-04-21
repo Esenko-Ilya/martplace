@@ -19,6 +19,7 @@
     box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.1);
     background-color: $blue;
     border-radius: 18px;
+    border: 1px solid transparent;
     padding: 5px 19px 4px 17px;
     line-height: 28px;
     color: #fff;
@@ -29,8 +30,10 @@
     list-style: none;
 
     &:hover {
-      background-color: #fff;
+      background-color: transparent;
       color: $blue;
+      border-color: $blue;
+      font-weight: 900;
     }
   }
 
@@ -41,20 +44,43 @@
     line-height: 22px;
   }
 
-  &__box-icons {
+  &__box-elements {
     margin-right: 48px;
-
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
 
-  &__box-icon {
-    list-style: none;
-    color: $grey;
-    font-size: 20px;
+  &__box-element {
     position: relative;
 
     &+& {
       margin-left: 32px;
     }
+
+    &.message,
+    &.notifications,
+    &.basket {
+      &:hover {
+        .header__dropdown {
+          border-width: 1px;
+          overflow: visible;
+          height: auto;
+          opacity: 1;
+          transition: all .3s;
+          box-shadow: 0px 5px 40px 0px rgba(82, 85, 90, 0.2);
+        }
+      }
+    }
+
+
+  }
+
+  &__box-link {
+    list-style: none;
+    color: $grey;
+    font-size: 20px;
+    padding-bottom: 40px;
   }
 
   &__icon-color {
@@ -67,12 +93,12 @@
     padding: 4px 7px 4px;
 
     &--red {
-      background-color: #ff6a6c;
+      background-color: $red;
       left: 10px;
     }
 
     &--green {
-      background-color: #62d03b;
+      background-color: $green;
       left: 15px;
     }
 
@@ -82,11 +108,303 @@
     }
   }
 
+  // Блок стилизации dropdown
+  &__dropdown {
+    width: 370px;
+    background-color: #fff;
+    border-top: 0px solid #0674ec;
+    position: absolute;
+    top: 62px;
+    z-index: 1;
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+    box-shadow: 0px 5px 40px 0px rgba(82, 85, 90, 0.2);
+    transition: all .3s;
+    opacity: 0;
+    height: 0;
+    overflow: hidden;
+  }
+
+  // Блок стилизации сообщений
+  .message-dropdown {
+    right: -32px;
+
+    &::before {
+      @include corner;
+      top: -19px;
+      right: 30px;
+    }
+  }
 
 
+  &__message-box {
+    padding: 27px 25px 25px;
+  }
 
 
+  &__message-view,
+  &__notifications-view {
+    font-size: 15px;
+    color: $blue;
+  }
 
+  &__message-item {
+    display: flex;
+    border-top: 1px solid $border-gr;
+    cursor: pointer;
+    padding: 20px 25px 15px;
+  }
+
+  &__item-thumbnail {
+    width: 40px;
+    height: 40px;
+    margin-right: 15px;
+
+  }
+
+  &__item-content {
+    flex: 1;
+    ;
+  }
+
+
+  &__item-alert {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 3px;
+    width: 100%;
+  }
+
+  &__item-subtitle {
+    color: $black;
+    font-family: 'Quicksand-Medium';
+    line-height: 20px;
+    position: relative;
+
+    &::before {
+      position: absolute;
+      right: -30px;
+    }
+  }
+
+  &__item-date,
+  &__notifications-date {
+    font-size: 14px;
+    color: $date;
+  }
+
+  &__item-label {
+    font-size: 15px;
+    color: $date;
+  }
+
+  // Стилизация уведомлений 
+
+  .notifications-dropdown {
+    left: -25px;
+    padding: 0 25px;
+
+    &::before {
+      @include corner;
+      top: -19px;
+      left: 26px;
+    }
+  }
+
+  &__notifications-box {
+    margin-bottom: 25px;
+    padding: 27px 25px 0;
+  }
+
+  &__notifications-item {
+    display: flex;
+    border-top: 1px solid $border-gr;
+    padding: 20px 0 6px;
+    position: relative;
+    cursor: pointer;
+
+    &::before {
+      border-radius: 50%;
+      position: absolute;
+      top: 50%;
+      right: 0;
+      transform: translateY(-50%);
+      padding: 5px 8px;
+      font-family: 'Linearicons-Free';
+    }
+
+    &.lnr-heart {
+      &::before {
+        content: "\e813";
+        background-color: rgba(6, 116, 236, 0.1);
+        color: $blue;
+
+      }
+    }
+
+    &.lnr-bubble {
+      &::before {
+        content: "\e83f";
+        background-color: rgba(115, 71, 193, 0.1);
+        color: $cat;
+      }
+    }
+
+
+    &.lnr-cart {
+      &::before {
+        content: "\e82e";
+        background-color: rgba(255, 106, 108, 0.1);
+        color: $red;
+
+      }
+    }
+
+    &.lnr-star {
+      &::before {
+        content: "\e814";
+        background-color: rgba(98, 208, 58, 0.1);
+        color: $green;
+      }
+    }
+  }
+
+  &__notifications-thumbnail {
+    min-width: 40px;
+    height: 40px;
+    margin-right: 15px;
+  }
+
+  &__notifications-content {
+    padding-right: 50px;
+    font-family: 'Quicksand';
+  }
+
+  &__notifications-subtitle {
+    color: $black;
+    font-family: 'Quicksand-Medium';
+    line-height: 20px;
+  }
+
+  &__notifications-action {
+    color: $date;
+    font-size: 15px;
+    line-height: 20px;
+  }
+
+  &__notifications-template {
+    font-size: 15px;
+    color: $blue;
+    line-height: 22px;
+  }
+
+  &__notifications-date {
+    font-size: 14px;
+    color: $date;
+    line-height: 28px;
+  }
+
+  // Стилизация корзины
+
+  .basket-dropdown {
+    width: 400px;
+    right: -42px;
+
+    &::before {
+      @include corner;
+      top: -19px;
+      right: 40px;
+    }
+  }
+
+  &__basket-box {
+    padding: 20px 25px;
+    display: flex;
+    position: relative;
+    border-bottom: 1px solid $border-gr;
+
+    &::before {
+      position: absolute;
+      right: 25px;
+      top: 26px;
+      padding: 5px 8px;
+      color: $trash;
+      border-radius: 50%;
+      background-color: rgba(115, 70, 192, 0.1);
+    }
+  }
+
+
+  &__basket-img {
+    min-width: 80px;
+    height: 70px;
+    margin-right: 15px;
+    margin-top: 5px;
+  }
+
+  &__basket-title {
+    color: #000000;
+    font-family: 'Quicksand-Medium';
+    line-height: 22px;
+    margin-bottom: 8px;
+  }
+
+  &__basket-info {
+    position: relative;
+    padding-right: 50px;
+  }
+
+  &__basket-category {
+    outline: none;
+    color: $cat;
+    font-size: 15px;
+    font-family: 'Quicksand';
+  }
+
+  &__basket-price {
+    background-color: rgba(6, 116, 236, 0.1);
+    padding: 7px 11px;
+    color: $blue;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    border-radius: 15px;
+    font-size: 15px;
+    text-align: center;
+    font-family: 'Quicksand-Medium';
+  }
+
+  &__basket-total {
+    color: #000;
+    font-family: 'Quicksand-Medium';
+    font-size: 18px;
+    text-align: right;
+    padding: 25px 30px 25px;
+  }
+
+  &__basket-btn {
+    display: flex;
+    justify-content: space-around;
+    font-size: 15px;
+    text-align: center;
+  }
+
+  &__btn-link {
+    color: #fff;
+    padding: 25px 30px;
+    flex: 1;
+  }
+
+  &__btn-link--blue {
+    background-color: $cat;
+
+  }
+
+  &__btn-link--purple {
+    background-color: $blue;
+  }
+
+  //Выпадающее меню пользователя
   &__user-info {
     display: flex;
     justify-content: space-between;
@@ -99,14 +417,42 @@
       .header__user-menu {
         padding: 20px;
         border-width: 1px;
-        overflow: auto;
+        overflow: visible;
         height: auto;
         box-shadow: 0px 5px 40px 0px rgba(82, 85, 90, 0.2);
       }
     }
   }
 
+  &__user-menu,
+  &__submenu-list {
+    width: 270px;
+    padding: 0 20px;
+    background-color: #fff;
+    border-top: 0px solid #0674ec;
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+    position: absolute;
+    right: 0;
+    top: 75px;
+    z-index: 2;
+    transition: all .4s;
+    height: 0;
+    overflow: hidden;
+    white-space: nowrap;
+
+  }
+
+  &__user-menu {
+    &::before {
+      @include corner;
+      top: -19px;
+      right: 28px;
+    }
+  }
+
   &__user-data {
+
     margin-left: 22px;
     line-height: 22px;
 
@@ -124,52 +470,21 @@
 
   }
 
-  //Выпадающее меню пользователя
-  &__user-menu {
-    max-width: 270px;
-    width: 100%;
-    padding: 0 20px;
-    background-color: #fff;
-    border-top: 0px solid #0674ec;
-    border-bottom-left-radius: 3px;
-    border-bottom-right-radius: 3px;
-    position: absolute;
-    right: 0;
-    top: 75px;
-    z-index: 2;
-    transition: all .4s;
-    height: 0;
-    overflow: hidden;
-
-    &::before {
-      content: '';
-      position: absolute;
-      width: 0;
-      height: 0;
-      border: 9px solid transparent;
-      border-bottom: 10px solid $blue;
-      top: -20px;
-      right: 50px;
-    }
+  &__user-item,
+  &__submenu-item {
+    list-style: none;
   }
 
-
-  &__user-item {
-    list-style: none;
-    padding: 11px 10px 10px;
+  &__user-link,
+  &__submenu-link {
+    display: block;
+    font-size: 15px;
+    color: $lm;
+    padding: 11px 10px;
 
     &:hover {
       background-color: $blue;
       border-radius: 2px;
-
-    }
-  }
-
-  &__user-link {
-    font-size: 15px;
-    color: $lm;
-
-    &:hover {
       color: #fff;
     }
   }
@@ -186,6 +501,7 @@
     justify-content: space-between;
     align-items: center;
     height: 80px;
+    position: relative;
   }
 
   &__menu-item {
@@ -194,11 +510,106 @@
     font-family: 'Quicksand-Medium';
     list-style: none;
     font-size: 15px;
+    position: relative;
+    padding-bottom: 30px;
+    margin-top: 30px;
+
+    &:hover {
+      .header__submenu-list {
+        padding: 20px;
+        border-width: 1px;
+        overflow: visible;
+        height: auto;
+        box-shadow: 0px 5px 40px 0px rgba(82, 85, 90, 0.2);
+      }
 
 
+    }
+    &:hover {
+      .header__pages {
+        height: auto;
+        overflow: auto;
+        padding: 15px 27px;
+        border-width: 1px;
+      }
+    }
     &+& {
       margin-left: 34px;
     }
+  }
+
+  //pages
+ 
+
+  &__pages {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0 27px;
+    background-color: #fff;
+    border-top: 0px solid #0674ec;
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+    position: absolute;
+    left: 0;
+    top: 80px;
+    transition: all .4s;
+    height: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    box-shadow: 0px 5px 40px 0px rgba(82, 85, 90, 0.2);
+  }
+
+
+  &__pages-title {
+    color: #000;
+    text-align: left;
+    padding: 13px 0;
+    font-family: 'Quicksand-Medium';
+    border-bottom: 1px solid $border-gr;
+
+  }
+
+  &__pages-list {
+    columns: 2;
+  }
+
+  .dashboard-col {
+    columns: 1;
+  }
+
+  &__pages-item {
+    list-style: none;
+    padding-top: 12px;
+    padding-right: 35px;
+  }
+
+  &__pages-link {
+    font-size: 15px;
+    color: $lm;
+
+    &:hover {
+      color: $blue;
+    }
+  }
+
+  &__pages-variation {
+    list-style: none;
+    font-size: 15px;
+    color: $lm;
+    text-align: right;
+    padding: 13px 0;
+    flex: 1;
+
+    &:hover {
+      color: $blue;
+    }
+  }
+
+  //подменю
+  &__submenu-list {
+    left: 0;
+    top: 55px;
   }
 
   &__menu-link {
@@ -207,7 +618,6 @@
 
     &:hover {
       color: $blue;
-      border-bottom: 3px solid $blue;
     }
   }
 
@@ -215,7 +625,6 @@
     max-width: 360px;
     width: 100%;
     position: relative;
-
   }
 
   &__form-input {
@@ -255,6 +664,19 @@
       padding: 14px 33px;
     }
   }
+
+}
+
+.title-box {
+  font-size: 18px;
+  color: #000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.active-date {
+  color: $blue;
 
 }
 
@@ -1543,3 +1965,5 @@
 
 //start block
 //end block
+
+@import "media";

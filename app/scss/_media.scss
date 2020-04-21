@@ -1,0 +1,13 @@
+@media (max-width: 970px) {
+
+  .foooter{
+    &__inner{
+      flex-wrap: wrap;
+    }
+    &__newsletter{
+      min-width: 100%;
+      
+    }
+  }
+
+}
