@@ -492,7 +492,9 @@
   &__user-icon {
     margin-right: 16px;
   }
-
+  &__menu-layout{
+    display: none;
+  }
 
   //top header end
   //header-menu start
@@ -504,6 +506,10 @@
     position: relative;
   }
 
+  &__menu-burger{
+    display: none;
+  }
+  
   &__menu-item {
     display: inline-block;
     text-transform: uppercase;
