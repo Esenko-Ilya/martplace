@@ -14,9 +14,11 @@
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^6.1.0",
     "gulp-concat": "^2.6.1",
+    "gulp-cssmin": "^0.2.0",
     "gulp-rename": "^1.4.0",
     "gulp-sass": "^4.0.2",
     "gulp-uglify": "^3.0.2",
+    "ion-rangeslider": "^2.3.1",
     "mixitup": "^3.3.1",
     "normalize.css": "^8.0.1",
     "rateyo": "^2.3.5"

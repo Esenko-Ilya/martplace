@@ -6,7 +6,7 @@ let gulp = require('gulp'),
     rename = require('gulp-rename'),
     del = require('del'),
     autoprefixer = require('gulp-autoprefixer');
-
+    cssmin = require('gulp-cssmin');
 
 gulp.task('clean', async function(){
   del.sync('dist')
@@ -29,8 +29,10 @@ gulp.task('css', function(){
     'node_modules/slick-carousel/slick/slick.css',
     'node_modules/select2/dist/css/select2.css',
     'node_modules/rateyo/src/jquery.rateyo.css',
+    'node_modules/ion-rangeslider/css/ion.rangeSlider.css'
   ])
-    .pipe(concat('libs.css'))
+    .pipe(concat('libs.min.css'))
+    .pipe(cssmin())
     .pipe(gulp.dest('app/css'))
     .pipe(browserSync.reload({stream: true}))
 });
@@ -50,7 +52,8 @@ gulp.task('js', function(){
     'node_modules/slick-carousel/slick/slick.js',
     'node_modules/select2/dist/js/select2.js',
     'node_modules/rateyo/src/jquery.rateyo.js',
-    'node_modules/mixitup/dist/mixitup.js'
+    'node_modules/mixitup/dist/mixitup.js',
+    'node_modules/ion-rangeslider/js/ion.rangeSlider.js'
   ])
     .pipe(concat('libs.min.js'))
     .pipe(uglify())
