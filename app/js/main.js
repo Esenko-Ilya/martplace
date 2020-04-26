@@ -27,7 +27,7 @@ $(function () {
     ratedFill: '#ffc000'
   });
 
-  $('.newest__item-star, .slider-feed__item-star').rateYo({
+  $('.newest__item-star, .slider-feed__item-star, .product__content-star').rateYo({
     starWidth: '13px',
     readOnly: true,
     rating: 4.5,
@@ -46,37 +46,24 @@ $(function () {
   $('.newest__filter').on('click', function () {
     $('.newest__filter-list').toggleClass('active');
   });
+
+
+  $('.header__pages-link').on('click', function () {
+    $('.header__pages').toggleClass('active');
+    $('.header__menu-link').toggleClass('active');
+  });
  
-  $('.header__menu-item').on('click', function () {
-    $(this).children('.header__submenu-list').toggleClass('active');
+//dropdown effect
+$('.header__menu-link').on('click', function(e){
+  e.preventDefault();
+  if ( $(this).next().hasClass('active') ) {
+  $(this).next().slideUp().removeClass('active')
+  } else {
+  $('.header__menu-link').next().slideUp().removeClass('active');
+  $(this).next().slideDown().addClass('active');
+  }
   });
-
-  var touch = $('.header__menu-item');
-  var menuWrapper = $('.header__menu-list');
-  var w = $(window).width();
-
-  $('html').click(function() {
-    menuWrapper.find('.header__submenu-list').slideUp(0);
-  });
-
-  menuWrapper.click(function(e) {
-    e.stopPropagation();
-  });
-
-  $(touch).on('click', function(e) {
-    e.preventDefault();
-    var menu = $(this).closest('.header__menu-item').find('.header__submenu-list');
-    var isClosed = menu.is(':hidden'); // закрыто ли подменю, по которому кликнули
-
-    menuWrapper.find('.header__submenu-list').slideUp(0); // закрываем все подменю
-
-    // если меню было закрыто, то открываем его
-    if (isClosed) {
-      menu.slideDown(0);
-    }
-  });
-
-
+//range-slider
   var $range = $(".product__range-slider"),
   $inputFrom = $(".product__input-from"),
   $inputTo = $(".product__input-to"),
@@ -139,6 +126,20 @@ $inputTo.on("input", function () {
       to: val
   });
 });
+//fliter-icon
+$('.product-filter__sort-list').on('click', function () {
+  $('.product__content-item').addClass('list');
+  $('.product-filter__sort-list').addClass('active');
+  $('.product-filter__sort-grid').removeClass('active');
+});
+$('.product-filter__sort-grid').on('click', function () {
+  $('.product__content-item').removeClass('list');
+  $('.product-filter__sort-grid').addClass('active');
+  $('.product-filter__sort-list').removeClass('active');
+});
+
+
+
 
 
   var mixer = mixitup('.newest__inner');
