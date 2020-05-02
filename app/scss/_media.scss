@@ -11,9 +11,7 @@
       margin-bottom: 18px;
     }
   }
-}
 
-@media (max-width: 1200px) {
 
   .slider-feed {
     &__inner {
@@ -55,10 +53,7 @@
       max-width: 320px;
     }
   }
-}
 
-
-@media (max-width: 1170px) {
   .header {
     &__pages-item {
       padding-top: 5px;
@@ -101,9 +96,7 @@
       border-top-right-radius: 0px;
     }
   }
-}
 
-@media (max-width: 1070px) {
   .header {
     &__pages-item {
       padding-top: 3px;
@@ -146,9 +139,7 @@
       &+& {
         margin-left: 0;
       }
-
     }
-
   }
 
   .btn-info,
@@ -160,14 +151,33 @@
   .choose {
 
     &__item {
-      max-width: 281px;
+      max-width: 361px;
+      width: 100%;
+      margin: 10px;
       box-shadow: none;
       border: 1px solid #ececec;
       padding-left: 17px;
       padding-right: 17px;
     }
+
+    &__inner {
+      justify-content: center;
+    }
   }
 
+  .pricing-plan {
+    padding: 40px 0;
+
+    &__box {
+      justify-content: flex-start;
+      margin-left: -30px;
+    }
+
+    &__box-item {
+      flex-basis: calc(33.33333% - 30px);
+      margin-left: 30px;
+    }
+  }
 }
 
 @media (max-width: 970px) {
@@ -189,175 +199,7 @@
         padding: 14px 20px;
       }
     }
-  }
 
-  .search {
-    &__inner {
-      transform: none;
-      border-bottom: 1px solid #ececec;
-    }
-
-    &__button {
-      padding: 18px 30px 17px;
-    }
-
-    &__input {
-      width: 500px;
-    }
-  }
-
-  .digital,
-  .advantages,
-  .newest,
-  .achievements,
-  .choose,
-  .feedback,
-  .news,
-  .join-us {
-    padding: 40px 0;
-  }
-
-  .aid {
-
-    &__support,
-    &__guarantee {
-      padding: 40px 10px;
-    }
-  }
-
-  .digital {
-
-    &__title,
-    &__title-bold {
-      font-size: 30px;
-      line-height: 40px;
-    }
-
-    &__text {
-      font-size: 18px;
-      line-height: 30px;
-    }
-  }
-
-  .advantages {
-
-    &__item {
-      padding: 25px 10px;
-    }
-  }
-
-  .choose {
-
-    &__inner {
-      justify-content: center;
-    }
-
-    &__item {
-      max-width: 361px;
-      width: 100%;
-      margin: 5px;
-    }
-  }
-
-  .trade {
-    display: block;
-  }
-
-  .feedback {
-
-    &__text {
-      padding: 0 20px;
-    }
-
-    &__inner {
-      display: block;
-    }
-
-    &__item {
-      width: 100%;
-
-      &+& {
-        margin-left: 0;
-      }
-    }
-
-  }
-
-  .news {
-
-    &__text {
-      padding: 0 20px;
-    }
-  }
-
-  //адаптив&
-  .footer {
-    &__inner {
-      flex-wrap: wrap;
-      justify-content: space-around;
-    }
-
-    &__newsletter {
-      margin-top: 10px;
-      border-top: 1px solid #ababab;
-      min-width: 100%;
-      text-align: center;
-    }
-
-    &__newsletter-title {
-      margin-bottom: 10px;
-    }
-
-    &__content {
-      padding: 30px 0;
-    }
-
-    &__newsletter-text {
-      margin-bottom: 10px;
-    }
-
-    &__newsletter-search {
-      margin-bottom: 40px;
-      width: 70%;
-      margin: 0 auto;
-    }
-
-    &__newsletter-iconblock {
-      margin-top: 20px;
-    }
-  }
-}
-
-@media (max-width: 850px) {
-  .slider-weekly {
-    padding: 40px 0;
-
-    &__item-img {
-      display: none;
-    }
-
-
-
-    &__item {
-      justify-content: center;
-    }
-
-    &__title {
-      margin: 0 auto;
-    }
-  }
-
-  .arrows {
-    display: none;
-  }
-
-  .slider-feed {
-    padding: 40px 0;
-  }
-}
-
-@media (max-width: 810px) {
-  .header {
     &__submenu-list {
       width: 100%;
       position: static;
@@ -427,27 +269,57 @@
     }
   }
 
+
   .search {
+    &__inner {
+      transform: none;
+      border-bottom: 1px solid #ececec;
+      padding: 20px;
+    }
+
+
+
     &__form {
       flex-wrap: wrap;
-
     }
 
     &__input {
       width: 600px;
-      margin-bottom: 15px;
+      margin-bottom: 5px;
     }
 
-    &__inner {
-      padding: 20px;
+  }
+
+  .digital,
+  .advantages,
+  .newest,
+  .achievements,
+  .choose,
+  .feedback,
+  .news,
+  .join-us {
+    padding: 40px 0;
+  }
+
+  .aid {
+
+    &__support,
+    &__guarantee {
+      padding: 40px 10px;
     }
   }
 
-  .newest {
+  .digital {
 
-    &__item {
-      flex-basis: calc(100%);
+    &__title,
+    &__title-bold {
+      font-size: 30px;
+      line-height: 40px;
+    }
 
+    &__text {
+      font-size: 18px;
+      line-height: 30px;
     }
   }
 
@@ -462,17 +334,168 @@
       margin: 0 auto;
       margin-bottom: 20px;
     }
+
+
+  }
+
+  .choose {}
+
+  .trade {
+    display: block;
+  }
+
+  .feedback {
+
+    &__text {
+      padding: 0 20px;
+    }
+
+    &__inner {
+      display: block;
+    }
+
+    &__item {
+      width: 100%;
+
+      &+& {
+        margin-left: 0;
+      }
+    }
+
   }
 
   .news {
+
+    &__text {
+      padding: 0 20px;
+    }
+
     &__item-img {
       display: none;
     }
   }
+
+  .newest {
+
+    &__item {
+      flex-basis: calc(100%);
+
+    }
+  }
+
+  //адаптив&
+  .footer {
+    &__inner {
+      flex-wrap: wrap;
+      justify-content: space-around;
+    }
+
+    &__newsletter {
+      margin-top: 10px;
+      border-top: 1px solid #ababab;
+      min-width: 100%;
+      text-align: center;
+      padding-top: 10px;
+    }
+
+    &__newsletter-title {
+      margin-bottom: 10px;
+    }
+
+    &__content {
+      padding: 30px 0;
+    }
+
+    &__newsletter-text {
+      margin-bottom: 10px;
+    }
+
+    &__newsletter-search {
+      margin-bottom: 40px;
+      width: 70%;
+      margin: 0 auto;
+    }
+
+    &__newsletter-iconblock {
+      margin-top: 20px;
+    }
+  }
+
+  .slider-weekly {
+    padding: 40px 0;
+
+    &__item-img {
+      display: none;
+    }
+
+
+
+    &__item {
+      justify-content: center;
+    }
+
+    &__title {
+      margin: 0 auto;
+    }
+  }
+
+  .arrows {
+    display: none;
+  }
+
+  .slider-feed {
+    padding: 40px 0;
+  }
+
+  .pricing-plan {
+    &__box {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    &__box-item {
+      flex-basis: calc(100%);
+      margin-bottom: 20px;
+    }
+  }
+
+  .howitworks {
+    &__item {
+      padding: 40px 0;
+      text-align: center;
+
+    }
+
+    &__item-box {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    &__item-image {
+
+      margin: 0;
+
+      &--gray {
+        margin: 0;
+      }
+    }
+
+    &__item-info {}
+  }
+
+  .img-adaptive {
+
+    max-width: 100%;
+    height: auto;
+  }
 }
 
 @media (max-width: 670px) {
+
   .header {
+
     & .basket-dropdown {
       width: 270px;
       left: auto;
@@ -490,70 +513,6 @@
     &__basket-total {
       padding: 10px 15px;
     }
-  }
-
-  .search {
-
-    &__input {
-      width: 500px;
-      margin-bottom: 10px;
-    }
-  }
-
-  .notifications,
-  .message {
-    display: none;
-  }
-
-  .achievements {
-    padding: 40px 0;
-
-    &__inner {
-      flex-wrap: wrap;
-    }
-
-    &__item-numb {
-
-      padding-top: 15px;
-    }
-
-    &__item {
-      width: 50%;
-      margin-bottom: 10px;
-    }
-  }
-
-  //адаптив footer
-  .footer {
-
-    &__company-title,
-    &__help-title {
-      margin-bottom: 10px;
-    }
-
-    &__newsletter-button {
-      padding-left: 15px;
-      padding-right: 15px;
-    }
-
-    &__contact {
-      min-width: 100%;
-      border-bottom: 1px solid #ababab;
-    }
-
-    &__inner {
-      justify-content: space-around;
-    }
-
-    &__created {
-      padding: 10px 0;
-    }
-  }
-}
-
-@media (max-width: 575px) {
-  .header {
-
 
     &__inner {
       height: 70px;
@@ -657,15 +616,55 @@
     }
   }
 
-  .search {
+  .notifications,
+  .message {
+    display: none;
+  }
 
-    &__input {
-      width:400px;
-      margin-bottom: 10px;
-      padding: 11px 170px 10px 20px;
+  .achievements {
+    padding: 40px 0;
+
+    &__inner {
+      flex-wrap: wrap;
     }
-    &__select{
-      padding: 0 40px 0 20px;
+
+    &__item-numb {
+
+      padding-top: 15px;
+    }
+
+    &__item {
+      width: 50%;
+      margin-bottom: 10px;
+    }
+  }
+
+  //адаптив footer
+  .footer {
+
+    &__company-title,
+    &__help-title {
+      margin-bottom: 10px;
+    }
+
+    &__newsletter-button {
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+
+    &__contact {
+      min-width: 100%;
+      border-bottom: 1px solid #ababab;
+      padding-bottom: 20px;
+      margin-bottom: 10px;
+    }
+
+    &__inner {
+      justify-content: space-around;
+    }
+
+    &__created {
+      padding: 10px 0;
     }
   }
 
@@ -728,11 +727,7 @@
     }
   }
 
-  .newest {
-    &__title {
-      font-size: 24px;
-    }
-  }
+
 
   .slider-feed {
     &__title {
@@ -751,20 +746,21 @@
       font-size: 24px;
     }
   }
-}
 
-@media (max-width: 515px) {
   .search {
 
     &__input {
-      width:350px;
+      width: 350px;
       margin-bottom: 10px;
       padding: 11px 155px 10px 10px;
     }
-    &__select{
+
+    &__select {
       padding: 0 40px 0 10px;
     }
+
   }
+
   .newest {
     &__title {
       font-size: 18px;
@@ -833,12 +829,61 @@
       width: 100%;
     }
   }
+
+  .howitworks {
+
+    &__item-info {
+      width: 100%;
+      padding: 0 10px;
+    }
+
+    &__item-title {
+      font-size: 20px;
+      margin-bottom: 10px;
+      padding-top: 10px;
+    }
+  }
+
+  .howitworks-line {
+    padding: 40px 0;
+
+    &__inner {
+      max-width: 360px;
+    }
+
+    &__title {
+      font-size: 26px;
+    }
+  }
+
+  .line-block {
+    &__title-span {}
+  }
+
+  .jointo {
+    padding: 40px 0;
+
+    &__title {
+      font-size: 24px;
+    }
+  }
+  .login{
+    padding: 40px 0;
+    &__lost{
+      display: block;
+    }
+    &__lost-name,
+    &__lost-account{
+      display: block;
+    }
+  }
 }
 
 @media (max-width: 435px) {
   .search {
     display: none;
   }
+
   .header {
     &__user-data {
       display: none;
@@ -860,16 +905,42 @@
         right: 66px;
       }
     }
+
+    &__logo-img {
+      display: none;
+    }
+
+    &__inner-logo {
+      margin-left: 40px;
+      background-image: url(../img/minilogo.png);
+      @include bg;
+      width: 145px;
+      height: 50px;
+      margin-bottom: 9px;
+    }
   }
 
   .slider-weekly {
+    &__item-title {
+      font-size: 15px;
+    }
+
+    &__item-like,
+    &__item-buttons {
+      display: none;
+    }
+
+    &__item-avatar {
+      display: none;
+    }
+
     &__item-content {
       padding: 15px 30px;
     }
 
     &__title {
       line-height: 24px;
-      font-size: 22px;
+      font-size: 18px;
     }
 
     &__item-buttons {
@@ -909,6 +980,23 @@
     &__filter-point {
       left: 75px;
     }
+
+    &__filter-point {
+      top: 50%;
+      transform: translate(-50%);
+    }
+
+    &__item-content {
+      padding: 13px;
+    }
+
+    &__item-title {
+      font-size: 18px;
+    }
+
+    &__item-star {
+      display: none;
+    }
   }
 
   .feedback {
@@ -943,85 +1031,7 @@
     }
   }
 
-  //адаптив footer
-  .footer {
-    &__newsletter-search {
-      width: 100%;
-    }
-
-    &__inner {
-      justify-content: space-between;
-    }
-
-    &__newsletter-iconblock {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    &__newsletter-icon {
-      margin-right: 4px;
-    }
-  }
-}
-
-@media (max-width: 380px) {
-  .header {
-
-    &__logo-img {
-      display: none;
-    }
-
-    &__inner-logo {
-      margin-left: 40px;
-      background-image: url(../img/minilogo.png);
-      @include bg;
-      width: 145px;
-      height: 50px;
-      margin-bottom: 9px;
-    }
-  }
-
-  .newest {
-    &__filter-point {
-      top: 50%;
-      transform: translate(-50%);
-    }
-
-    &__item-content {
-      padding: 13px;
-    }
-
-    &__item-title {
-      font-size: 18px;
-    }
-
-    &__item-star {
-      display: none;
-    }
-
-  }
-
-  .slider-weekly {
-    &__item-title {
-      font-size: 15px;
-    }
-
-    &__item-like,
-    &__item-buttons {
-      display: none;
-    }
-
-    &__item-avatar {
-      display: none;
-    }
-
-    &__title {
-
-      font-size: 18px;
-    }
-  }
-
+  .slider-weekly {}
 
   .slider-feed {
     &__title {
@@ -1057,4 +1067,84 @@
     }
   }
 
+  //адаптив footer
+  .footer {
+    &__newsletter-search {
+      width: 100%;
+    }
+
+    &__inner {
+      justify-content: space-between;
+    }
+
+    &__newsletter-iconblock {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    &__newsletter-icon {
+      margin-right: 4px;
+    }
+  }
+
+  .pricing-plan {
+
+    &__box-item {
+      padding: 24px 10px 30px;
+    }
+  }
+
+  .recovery {
+
+    &__text,
+    &__form {
+      padding: 30px 10px 30px 10px;
+    }
+
+    &__button {
+      position: relative;
+      left: 50%;
+      transform: translate(-50%, 0);
+    }
+  }
+
+  .error {
+    padding: 40px 0;
+
+    &__img {
+      margin-bottom: 10px;
+    }
+
+    &__text {
+      font-size: 24px;
+    }
+  }
+  .howitworks-line {
+    
+
+    &__inner {
+      max-width: 270px;
+    }
+
+    &__title {
+      font-size:20px;
+    }
+  }
+  .login{
+    &__info,
+    &__form,
+    &__lost{
+      padding: 10px 20px 10px;
+    }
+    &__lost-name,
+    &__lost-account{
+      font-size: 14px;
+    }
+  }
+  .register{
+    &__text{
+      font-size: 14px;
+    }
+  }
 }

@@ -11,23 +11,20 @@ $(function () {
     slidesToScroll: 1,
     appendArrows: '.slider-feed__arrows',
     prevArrow: "<div class='slider-feed__arrow arrow arrow--prev lnr lnr-chevron-left'></div>",
-    nextArrow: "<div class='slider-feed__arrow arrow arrow--next lnr lnr-chevron-right'></div>",
-    
+    nextArrow: "<div class='slider-feed__arrow arrow arrow--next lnr lnr-chevron-right'></div>",    
     responsive: [
       {
         breakpoint: 1200,
         settings: {
           slidesToShow:2,
-          slidesToScroll: 1,     
-          
+          slidesToScroll: 1,               
         }
       },
       {
         breakpoint: 840,
         settings: {
           slidesToShow:1,
-          slidesToScroll: 1,
-          
+          slidesToScroll: 1,          
         }
       }
     ]
@@ -63,6 +60,9 @@ $(function () {
 
   $('.newest__filter').on('click', function () {
     $('.newest__filter-list').toggleClass('active');
+  });
+  $('.favourites-filter__filter').on('click', function () {
+    $('.favourites-filter__filter-list').toggleClass('active');
   });
 
 

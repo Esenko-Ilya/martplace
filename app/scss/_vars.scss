@@ -2,6 +2,7 @@
 $blue:       #0674ec;
 $red:        #ff6a6c; 
 $green:      #62d03b;
+$gold:       #feb71d;
 $bg:         #eff1f5;
 $black:      #333333;
 $grey:       #7e8fa1;
@@ -25,7 +26,7 @@ $trash:      #818c98;
       width: 0;
       height: 0;
       border: 9px solid transparent;
-      border-bottom-color:$blue;      
+      border-bottom-color:$blue;
       z-index: 1;
 }
 
@@ -34,5 +35,4 @@ $trash:      #818c98;
   background-color: $blue;
   background-image: linear-gradient(270deg, rgba(6, 116, 236, 0) 1%, rgba(61, 94, 215, 0.54) 46%, rgba(115, 71, 193, 1) 100%) !important;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#0674ec", endColorstr="#7347c1", GradientType=1);
-  
 }
