@@ -178,6 +178,48 @@
       margin-left: 30px;
     }
   }
+
+  .favourites-filter {
+    &__count {
+      font-size: 16px;
+    }
+
+    &__sort-type {
+      margin: 10px;
+
+    }
+
+    &__inner {
+      flex-wrap: wrap;
+      justify-content: center;
+
+    }
+
+    &__count {
+      width: 100%;
+      text-align: center;
+      border-right: none;
+      padding: 0;
+      padding-top: 10px;
+      font-size: 24px;
+    }
+
+    &__filter {
+      border-right: none;
+      padding: 20px 0;
+
+    }
+  }
+
+  .contact {
+    &__form-input {
+      max-width: 100%;
+
+      &:nth-child(even) {
+        margin-left: 0;
+      }
+    }
+  }
 }
 
 @media (max-width: 970px) {
@@ -489,6 +531,47 @@
 
     max-width: 100%;
     height: auto;
+  }
+
+  .favourites-filter {
+    &__element {
+      margin-right: 0;
+    }
+
+    &__sort-type {
+      padding-left: 0;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  }
+
+  .contact {
+    padding: 40px 0;
+
+    &__title {
+      font-size: 24px;
+    }
+    &__text{
+      padding: 0 50px;
+    }
+    &__box {
+
+      display: block;
+
+    }
+
+    &__box-item {
+      padding: 20px 10px;
+      
+      margin: 0 auto 10px;
+         &+& {
+          margin: 0 auto 10px;
+      }
+
+    }
+    &__message-form{
+      padding: 40px 40px;
+    }
   }
 }
 
@@ -867,14 +950,41 @@
       font-size: 24px;
     }
   }
-  .login{
+
+  .login {
     padding: 40px 0;
-    &__lost{
+
+    &__lost {
       display: block;
     }
+
     &__lost-name,
-    &__lost-account{
+    &__lost-account {
       display: block;
+    }
+  }
+
+  .favourites-filter {
+    &__inner {
+      justify-content: space-around;
+    }
+
+    &__element,
+    &__sort-variant {
+      margin-top: 10px;
+
+    }
+
+    &__sort-type {}
+
+    &__select {
+      margin: 0 5px;
+
+    }
+
+    &__filter-list {
+      left: -100px;
+
     }
   }
 }
@@ -1120,31 +1230,51 @@
       font-size: 24px;
     }
   }
+
   .howitworks-line {
-    
+
 
     &__inner {
       max-width: 270px;
     }
 
     &__title {
-      font-size:20px;
+      font-size: 20px;
     }
   }
-  .login{
+
+  .login {
+
     &__info,
     &__form,
-    &__lost{
+    &__lost {
       padding: 10px 20px 10px;
     }
+
     &__lost-name,
-    &__lost-account{
+    &__lost-account {
       font-size: 14px;
     }
   }
-  .register{
-    &__text{
+
+  .register {
+    &__text {
       font-size: 14px;
+    }
+  }
+
+  .pagination-left,
+  .pagination-right {
+    display: none;
+  }
+  .contact {
+    &__text{
+      padding: 0 10px;
+      
+    }
+    &__form-input,
+    &__form-text{
+      padding-left: 15px;
     }
   }
 }
