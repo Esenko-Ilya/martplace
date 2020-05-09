@@ -11,20 +11,20 @@ $(function () {
     slidesToScroll: 1,
     appendArrows: '.slider-feed__arrows',
     prevArrow: "<div class='slider-feed__arrow arrow arrow--prev lnr lnr-chevron-left'></div>",
-    nextArrow: "<div class='slider-feed__arrow arrow arrow--next lnr lnr-chevron-right'></div>",    
+    nextArrow: "<div class='slider-feed__arrow arrow arrow--next lnr lnr-chevron-right'></div>",
     responsive: [
       {
         breakpoint: 1200,
         settings: {
           slidesToShow:2,
-          slidesToScroll: 1,               
+          slidesToScroll: 1,
         }
       },
       {
         breakpoint: 840,
         settings: {
           slidesToShow:1,
-          slidesToScroll: 1,          
+          slidesToScroll: 1,
         }
       }
     ]
@@ -68,9 +68,9 @@ $(function () {
 
   $('.header__pages-link').on('click', function () {
     $('.header__pages').toggleClass('active');
-    
+
   });
- 
+
 //dropdown effect
 $('.header__menu-link').on('click', function(e){
   e.preventDefault();
@@ -100,8 +100,8 @@ $range.ionRangeSlider({
   from: 30,
   to: 300,
   prefix: "$",
-  hide_min_max: true,    
-  hide_from_to: true, 
+  hide_min_max: true,
+  hide_from_to: true,
   onStart: updateInputs,
   onChange: updateInputs
 });
@@ -110,21 +110,21 @@ instance = $range.data("ionRangeSlider");
 function updateInputs (data) {
 from = data.from;
   to = data.to;
-  
+
   $inputFrom.prop("value", from);
-  $inputTo.prop("value", to);	
+  $inputTo.prop("value", to);
 }
 
 $inputFrom.on("input", function () {
   var val = $(this).prop("value");
-  
+
   // validate
   if (val < min) {
       val = min;
   } else if (val > to) {
       val = to;
   }
-  
+
   instance.update({
       from: val
   });
@@ -132,14 +132,14 @@ $inputFrom.on("input", function () {
 
 $inputTo.on("input", function () {
   var val = $(this).prop("value");
-  
+
   // validate
   if (val < from) {
       val = from;
   } else if (val > max) {
       val = max;
   }
-  
+
   instance.update({
       to: val
   });
@@ -157,8 +157,14 @@ $('.product-filter__sort-grid').on('click', function () {
 });
 
 
-
-
+$('.single-tabs .tab').on('click', function(event) {
+  var id = $(this).attr('data-id');
+    $('.single-tabs').find('.tab-item').removeClass('active-tab').hide();
+    $('.single-tabs .tabs').find('.tab').removeClass('active');
+    $(this).addClass('active');
+    $('#'+id).addClass('active-tab').fadeIn();
+    return false;
+  });
 
   var mixer = mixitup('.newest__inner');
   $(window).on("load", function () {
